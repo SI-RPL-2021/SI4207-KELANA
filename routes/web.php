@@ -21,3 +21,5 @@ Auth::routes();
 
 Route::get('/user', [App\Http\Controllers\HomeController::class, 'index'])->name('user');
 Route::get('/admin', [App\Http\Controllers\HomeController::class, 'handleAdmin'])->name('admin.route')->middleware('admin');
+Route::get('/explore', [App\Http\Controllers\HomeController::class, 'explore'])->name(''); //route ke index explre
+

@@ -30,4 +30,9 @@ class HomeController extends Controller
     {
         return view('admin.index');
     }
+
+    public function explore()
+    {
+        return view('explore.index');
+    }
 }
