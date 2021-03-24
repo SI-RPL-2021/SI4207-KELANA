@@ -8,7 +8,7 @@
                     <div class="card-header">Filtering</div>
 
                     <div class="card-body">
-                        masih nyoba dulu
+                        masih nyoba duluuuu
                     </div>
                 </div>
             </div>
