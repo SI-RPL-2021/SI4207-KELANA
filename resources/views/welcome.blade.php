@@ -50,7 +50,7 @@
                         <a class="nav-link" href="#">Explore</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Merchant</a>
+                        <a class="nav-link" href="#">Shop</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Teman Kelana</a>
