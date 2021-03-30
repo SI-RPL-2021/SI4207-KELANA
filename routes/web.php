@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\DetailuserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +23,6 @@ Auth::routes();
 
 Route::get('/user', [App\Http\Controllers\HomeController::class, 'index'])->name('user');
 Route::get('/admin', [App\Http\Controllers\HomeController::class, 'handleAdmin'])->name('admin.route')->middleware('admin');
+
+
+Route::resource('detailuser', DetailuserController::class);
