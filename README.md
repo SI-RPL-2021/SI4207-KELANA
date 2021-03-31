@@ -8,6 +8,8 @@ Project Capstone
 
 ## How to Clone
 
+```bash
+______________________________________
 - Clone your project
 - Go to the folder application using cd command on your cmd or terminal
 - Run composer install on your cmd or terminal
@@ -19,16 +21,5 @@ Project Capstone
 - Run php artisan migrate
 - Run php artisan serve
 - Go to your localhost
-
-## Update Notes
-
-```bash
-______________________________________
-Multi Auth 
-Is_admin = 1 
-
-landing page
-login page
-regis page
 ______________________________________
 
