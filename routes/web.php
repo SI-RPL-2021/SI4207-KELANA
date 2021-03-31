@@ -21,3 +21,4 @@ Auth::routes();
 
 Route::get('/user', [App\Http\Controllers\HomeController::class, 'index'])->name('user');
 Route::get('/admin', [App\Http\Controllers\HomeController::class, 'handleAdmin'])->name('admin.route')->middleware('admin');
+Route::resource('merchant', MerchantController::class);
