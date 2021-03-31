@@ -7,7 +7,7 @@
 
     <div class="container">
         <div class="row justify-content-md-center">
-            
+            <div id="show_maps"  style="width:100%;height:100%;"></div>
         </div>
     </div>
     
