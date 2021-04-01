@@ -101,7 +101,6 @@
             <br><br><br><br>
             <br><br><br><br>
             <br><br><br><br>
-            <br><br><br><br>
             <div class="container">
                 <h1>
                     "Ubah Wacana

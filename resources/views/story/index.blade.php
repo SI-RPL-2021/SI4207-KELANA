@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<<<<<<< HEAD
     
     <h1 style="text-align: center">Tell us your Story!</h1>
     <h4 style="text-align: center">Photos and Trip Story</h4>
@@ -46,5 +47,12 @@
                 </div>
               </div>
         </div>
+=======
+    <br><br><br><br>
+    <br><br><br><br>
+    <div class="container">
+        <h1>Story Page</h1>
+        <a href="{{ route('story.create') }}" class="btn btn-primary shadow"> Post new story</a>
+>>>>>>> 71135fcd8e38f57b7ed625bd9038feaae9456172
     </div>
 @endsection

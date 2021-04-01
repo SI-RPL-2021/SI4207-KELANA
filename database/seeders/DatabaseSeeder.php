@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
                 'name' => 'admin',
                 'email' => 'admin@kelana.co.id',
                 'is_admin' => '1',
-                'password' => bcrypt('admin123'),
+                'password' => bcrypt('admin432'),
 
             ],
         ];
