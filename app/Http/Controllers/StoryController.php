@@ -37,7 +37,6 @@ class StoryController extends Controller
     public function store(Request $request)
     {
         Story::create($request->all());
-
         return redirect()->route('story.index')
             ->with('success', 'Story berhasil di-post!');
     }
@@ -50,7 +49,7 @@ class StoryController extends Controller
      */
     public function show(Story $story)
     {
-        //
+        return view('story.show', compact('story'));
     }
 
     /**
