@@ -20,17 +20,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <!-- maps api -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLVjBFKcNqSNEXiCiTb7UwfP4RKY0e6Nw&callback=initMap" async defer></script>
-
-        <script type="text/javascript">
-            function initMap() {
-                var map = new google.maps.Map(document.getElementById('show_maps'), {
-                center: {lat: -1.035721, lng: 118.436931},
-                 zoom: 5
-                });
-            }
-        </script>
+   
 </head>
 
 <body class="bg-white">

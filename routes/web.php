@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\DetailuserController;
 use App\Http\Controllers\StoryController;
+use App\Http\Controllers\ExploreController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,5 @@ Route::get('/admin', [App\Http\Controllers\HomeController::class, 'handleAdmin']
 
 Route::resource('detailuser', DetailuserController::class);
 Route::resource('story', StoryController::class);
+
+Route::resource('explore', ExploreController::class);
