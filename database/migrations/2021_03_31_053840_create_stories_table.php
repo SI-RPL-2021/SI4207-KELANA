@@ -17,6 +17,7 @@ class CreateStoriesTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('destination');
+            $table->datetime('date');
             $table->longText('description');
             $table->string('path');
             $table->string('author');

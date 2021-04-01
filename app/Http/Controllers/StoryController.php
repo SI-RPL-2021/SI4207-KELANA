@@ -48,7 +48,10 @@ class StoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Story::create($request->all());
+
+        return redirect()->route('story.index')
+            ->with('success', 'Story berhasil di-post!');
     }
 
     /**
