@@ -18,7 +18,7 @@
                                 <h5 class="card-title">{{ $str->title }}</h5>
                                 <p>Cerita liburan di {{ $str->destination }}</p>
                                 <p>Ditulis oleh : {{ $str->author }}</p>
-                                <a href="/story/{{ $str->id }}/show" class="btn btn-primary">Read more</a>
+                                <a href="{{ route('story.show', $str->id) }}" class="btn btn-primary">Read more</a>
                             </div>
                         </div>
                     </div>
