@@ -53,7 +53,7 @@
                         <a class="nav-link" href="#">Merchant</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Teman Kelana</a>
+                        <a class="nav-link" href="{{route("teman_kelana")}}">Teman Kelana</a>
                     </li>
                 </ul>
 
