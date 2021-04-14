@@ -29,3 +29,4 @@ Route::get('/admin', [App\Http\Controllers\HomeController::class, 'handleAdmin']
 
 Route::resource('detailuser', DetailuserController::class);
 Route::resource('story', StoryController::class);
+Route::resource('merchant', MerchantController::class);
