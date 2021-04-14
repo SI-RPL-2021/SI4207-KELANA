@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\DetailuserController;
 use App\Http\Controllers\StoryController;
+use App\Http\Controllers\MerchantController;
 
 /*
 |--------------------------------------------------------------------------

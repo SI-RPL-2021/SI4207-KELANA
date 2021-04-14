@@ -24,7 +24,7 @@ class MerchantController extends Controller
      */
     public function create()
     {
-        //
+        return view('merchant.create');
     }
 
     /**
@@ -35,7 +35,9 @@ class MerchantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Merchant::create($request->all());
+        return redirect()->route('merchant.index')
+            ->with('success', 'Story berhasil di-post!');
     }
 
     /**
