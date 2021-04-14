@@ -50,7 +50,7 @@
                         <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="">Explore</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="">Merchant</a>
+                        <a class="nav-link" href="#">Shop</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="">Teman
