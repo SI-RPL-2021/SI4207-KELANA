@@ -21,7 +21,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-white">
     <style>
         .bg-dark {
             transition: 750ms ease;
@@ -34,9 +34,9 @@
 
     </style>
     <div id="app">
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/user') }}">
                     <img src="{{ url('images/logo1.png') }}" alt="Kelana" width="190" height="45">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -94,12 +94,17 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                                                document.getElementById('logout-form').submit();">
+                                    @auth
+                                        @if (auth()->user()->is_admin == 1)
+                                            {{-- <a class="dropdown-item" href="{{ url('payment') }}">Confirmation</a> --}}
+                                        @else
+                                            <a class="dropdown-item" href="{{ url('detailuser') }}">My Profile</a>
+                                        @endif
+                                    @endauth
+                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                                document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
@@ -117,9 +122,9 @@
         </main>
         <!-- Footer -->
         <!-- Copyright -->
-        <div class="text-center p-3"">
-                © 2021 Copyright
-                <a class=" text-dark" href="{{ url('/') }}">Kelana.co.id</a>
+        <div class="text-center p-3">
+            © 2021 Copyright
+            <a class=" text-dark" href="{{ url('/') }}">Kelana.co.id</a>
         </div>
         <!-- Copyright -->
         </footer>
