@@ -15,12 +15,12 @@ class CreateStoriesTable extends Migration
     {
         Schema::create('stories', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('destination');
-            $table->datetime('date');
-            $table->longText('description');
-            $table->string('path');
-            $table->string('author');
+            $table->string('story_title');
+            $table->string('story_destination');
+            $table->datetime('story_date');
+            $table->longText('story_description');
+            $table->string('story_img');
+            $table->string('story_author');
             $table->timestamps();
         });
     }
