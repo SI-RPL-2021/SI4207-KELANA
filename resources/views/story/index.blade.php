@@ -9,21 +9,31 @@
         <br>
         <br>
         <section>
-            <div class="row">
-                @foreach ($story as $str)
-                    <div class="col">
-                        <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ $str->title }}</h5>
-                                <p>Cerita liburan di {{ $str->destination }}</p>
-                                <p>Ditulis oleh : {{ $str->author }}</p>
-                                <a href="{{ route('story.show', $str->id) }}" class="btn btn-primary">Read more</a>
-                            </div>
+            <?php
+            //Columns must be a factor of 12 (1,2,3,4,6,12)
+            $numOfCols = 3;
+            $rowCount = 0;
+            $bootstrapColWidth = 12 / $numOfCols;
+            foreach ($story as $str) {
+
+            if ($rowCount % $numOfCols == 0) { ?> <div class="row"> <?php }
+                $rowCount++;
+                ?>
+                <div class="col-md-<?php echo $bootstrapColWidth; ?>">
+                    <div class="card">
+                        <img src="/images/{{ $str->story_img }}" class="card-img-top img-fluid" alt="story_img">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $str->story_title }}</h5>
+                            <p>Cerita liburan di {{ $str->story_destination }}</p>
+                            <p>Ditulis oleh : {{ $str->story_author }}</p>
+                            <a href="{{ route('story.show', $str->id) }}" class="btn btn-primary">Read more</a>
                         </div>
                     </div>
-                @endforeach
-            </div>
+                </div>
+                <?php if ($rowCount % $numOfCols == 0) { ?>
+            </div> <?php }
+            }
+            ?>
 
         </section>
     </div>
