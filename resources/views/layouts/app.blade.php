@@ -19,9 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
 
-<body class="bg-white">
     <style>
         .bg-dark {
             transition: 750ms ease;
@@ -33,6 +31,11 @@
         }
 
     </style>
+
+</head>
+
+<body class="bg-white">
+
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
             <div class="container">
@@ -101,8 +104,9 @@
                                             <a class="dropdown-item" href="{{ url('detailuser') }}">My Profile</a>
                                         @endif
                                     @endauth
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                    document.getElementById('logout-form').submit();">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                                                                                                        document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -130,6 +134,14 @@
         </footer>
         <!-- Footer -->
 
+        <!-- navbar warna transisi js -->
+        <script>
+            $(window).scroll(function() {
+                $('nav').toggleClass('scolled', $(this).scrollTop() > 10);
+            });
+
+        </script>
+        <!-- navbar warna transisi js -->
     </div>
 </body>
 
