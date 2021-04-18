@@ -2,7 +2,6 @@
 
 @section('content')
     <br><br><br><br>
-    <br><br><br><br>
     <div class="container">
         <h1>Story Page</h1>
         <a href="{{ route('story.create') }}" class="btn btn-primary shadow"> Post new story</a>
@@ -11,7 +10,7 @@
         <section>
             <?php
             //Columns must be a factor of 12 (1,2,3,4,6,12)
-            $numOfCols = 3;
+            $numOfCols = 2;
             $rowCount = 0;
             $bootstrapColWidth = 12 / $numOfCols;
             foreach ($story as $str) {
@@ -29,6 +28,7 @@
                             <a href="{{ route('story.show', $str->id) }}" class="btn btn-primary">Read more</a>
                         </div>
                     </div>
+                    <br>
                 </div>
                 <?php if ($rowCount % $numOfCols == 0) { ?>
             </div> <?php }
