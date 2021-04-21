@@ -4,7 +4,7 @@
     <br><br><br><br>
     <br><br><br><br>
     <div class="container">
-        <a href="{{ route('merchant.create') }}" class="btn btn-primary shadow"> Add new Merchant</a>
+        <a href="{{ route('merchant.create') }}" class="btn btn-primary shadow"> Create Your Merchant Ads!</a>
         <br>
         <br>
         <div class="row">

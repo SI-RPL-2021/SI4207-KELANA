@@ -4,12 +4,19 @@
     <br><br><br><br>
     <br><br><br><br>
     <div class="container">
+        <h1 class="text-center">Post your story</h1>
         <form action="/story" id="create" method="post" enctype="multipart/form-data">
             @csrf
             <div class="form">
                 <div class="form-group">
                     <label for="story_title">Title</label>
                     <input type="text" class="form-control" id="story_title" name="story_title">
+                </div>
+                <div class="form-group">
+                    <div class="custom-file">
+                        <label for="story_img">Select a Photo</label>
+                        <input type="file" class="form-control-file" id="story_img" name="story_img">
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="story_destination">Destination</label>
@@ -26,12 +33,6 @@
                 <div class="form-group">
                     <label for="story_description">Description</label>
                     <textarea type="text" class="form-control" id="story_description" name="story_description"> </textarea>
-                </div>
-                <div class="form-group">
-                    <div class="custom-file">
-                        <label for="story_img">Select a Photo</label>
-                        <input type="file" class="form-control-file" id="story_img" name="story_img">
-                    </div>
                 </div>
                 <br>
             </div>
