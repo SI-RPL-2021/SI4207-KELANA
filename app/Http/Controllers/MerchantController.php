@@ -14,7 +14,8 @@ class MerchantController extends Controller
      */
     public function index()
     {
-        return view('merchant.index');
+        $merchant = \App\Models\Merchant::all();
+        return view('merchant.index', compact('merchant'));
     }
 
     /**
