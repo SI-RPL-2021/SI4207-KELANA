@@ -15,15 +15,20 @@
 
         <br><br><br>
         <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
         
         <div class="container">
-            <h2 style="color: white">Cari di sekitar mu ?</h2>
+            <h2 >Cari di sekitar mu ?</h2>
             <a href="" type="button" class="btn btn-primary">Penginapan</a>
             <a href="" type="button" class="btn btn-primary" style="margin-left:10px">Tempat Wisata</a>
             <a href="" type="button" class="btn btn-primary" style="margin-left:10px">Tempat Makan</a>
         </div>
     </div>
     
+    <br><br><br>
+
     <div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-forward align-items-center g-5 py-5">
           <div class="col-10 col-sm-8 col-lg-6">
