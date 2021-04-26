@@ -10,13 +10,13 @@
     <div class="container">
         <div class="row align-items-start">
           <div class="col">
-            <a href="{{ route('Explore.tempatwisata') }}"><img src="{{url('images/tempatwisata.png')}}" alt="{{ route('story.create') }}" style="width: 300px; height: 300px"></a>
+            <a href="{{ url('/park') }}"><img src="{{url('images/tempatwisata.png')}}" alt="{{ route('story.create') }}" style="width: 300px; height: 300px"></a>
           </div>
           <div class="col">
-            <a href="{{ route('Explore.penginapan') }}"><img src="{{url('images/penginapan.png')}}" alt="{{ route('story.create') }}" style="width: 300px; height: 300px"></a>
+            <a href="{{ url('/hotel') }}"><img src="{{url('images/penginapan.png')}}" alt="{{ route('story.create') }}" style="width: 300px; height: 300px"></a>
           </div>
           <div class="col">
-            <a href="{{ route('Explore.kuliner') }}"><img src="{{url('images/kuliner.png')}}" alt="{{ route('story.create') }}" style="width: 300px; height: 300px"></a>
+            <a href="{{ url('/food') }}"><img src="{{url('images/kuliner.png')}}" alt="{{ route('story.create') }}" style="width: 300px; height: 300px"></a>
           </div>
         </div>
     </div>
