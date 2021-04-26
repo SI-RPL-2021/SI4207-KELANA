@@ -36,10 +36,30 @@ class StoryController extends Controller
      */
     public function store(Request $request)
     {
-        Story::create($request->all());
 
-        return redirect()->route('story.index')
-            ->with('success', 'Story berhasil di-post!');
+        $request->validate(([
+            'story_img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
+        ]));
+
+        // $imgName = time() . '.' . request()->image->getClientOriginalExtension();
+
+        $image = $request->file('story_img');
+        $destinationPath = public_path('/images');
+        $imgName = time() . '.' . $image->getClientOriginalExtension();
+        $image->move($destinationPath, $imgName);
+
+        // $request->story_img->move(public_path('images'), $imgName);
+
+        Story::create([
+            'story_title' => $request->story_title,
+            'story_destination' => $request->story_destination,
+            'story_date' => $request->story_date,
+            'story_description' => $request->story_description,
+            'story_img' => $imgName,
+            'story_author' => $request->story_author
+        ]);
+
+        return redirect('story');
     }
 
     /**
@@ -50,7 +70,7 @@ class StoryController extends Controller
      */
     public function show(Story $story)
     {
-        //
+        return view('story.show', compact('story'));
     }
 
     /**
