@@ -67,7 +67,7 @@
                             <a class="nav-link" href="{{ url('/explore') }}">Explore</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/merchant') }}">Merchant</a>
+                            <a class="nav-link" href="{{ url('/merchant') }}">Shop</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/temankelana') }}">Teman Kelana</a>
@@ -106,7 +106,7 @@
                                     @endauth
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                                                                                                            document.getElementById('logout-form').submit();">
+                                                                                                                                                            document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<br>
-<br>
+    <br>
+    <br>
     <div class="container">
         <section class="shadow rounded">
             <div class="container">
