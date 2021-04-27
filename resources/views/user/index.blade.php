@@ -1,17 +1,26 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-
-                <div class="card-body">
-                    You don't seem to be an admin!
-                </div>
-            </div>
+    <div class="jumbotron text-white" style="background-image: url('{{ url('images/landing1.jpg') }}') ;
+        height: 100vh; background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        ">
+        <br><br><br><br>
+        <br><br><br><br>
+        <br><br><br><br>
+        <br><br><br><br>
+        <br><br><br><br>
+        <br><br><br><br>
+        <div class="container">
+            <h1>
+                Hi ! Welcome {{ Auth::user()->name }}
+            </h1>
+            <p class="mb-4">
+                Hey, check this out.
+            </p>
+            <a href="/story" class="btn btn-info text-white">See More 'Story'</a>
         </div>
     </div>
-</div>
+    </section>
 @endsection
