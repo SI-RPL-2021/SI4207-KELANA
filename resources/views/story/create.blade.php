@@ -2,9 +2,14 @@
 
 @section('content')
     <br><br><br><br>
-    <br><br><br><br>
     <div class="container">
-        <h1 class="text-center">Post your story</h1>
+        <h1 class="text-center" style=" 
+                                color: #69D1C5; 
+                                -webkit-text-stroke-width: 0.5px;
+                                -webkit-text-stroke-color: black;
+                                ">Post your Story
+        </h1>
+        <br><br><br><br>
         <form action="/story" id="create" method="post" enctype="multipart/form-data">
             @csrf
             <div class="form">
