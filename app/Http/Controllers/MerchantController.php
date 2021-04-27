@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Story;
+use App\Models\Merchant;
 use Illuminate\Http\Request;
 
-class StoryController extends Controller
+class MerchantController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class StoryController extends Controller
      */
     public function index()
     {
-        $story = \App\Models\Story::all();
-        return view('story.index', compact('story'));
+        $merchant = \App\Models\Merchant::all();
+        return view('merchant.index', compact('merchant'));
     }
 
     /**
@@ -25,7 +25,7 @@ class StoryController extends Controller
      */
     public function create()
     {
-        return view('story.create');
+        return view('merchant.create');
     }
 
     /**
@@ -36,50 +36,47 @@ class StoryController extends Controller
      */
     public function store(Request $request)
     {
-
         $request->validate(([
-            'story_img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
+            'merchant_img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
         ]));
 
-        // $imgName = time() . '.' . request()->image->getClientOriginalExtension();
 
-        $image = $request->file('story_img');
+        $image = $request->file('merchant_img');
         $destinationPath = public_path('/images');
         $imgName = time() . '.' . $image->getClientOriginalExtension();
         $image->move($destinationPath, $imgName);
 
-        // $request->story_img->move(public_path('images'), $imgName);
 
-        Story::create([
-            'story_title' => $request->story_title,
-            'story_destination' => $request->story_destination,
-            'story_date' => $request->story_date,
-            'story_description' => $request->story_description,
-            'story_img' => $imgName,
-            'story_author' => $request->story_author
+        Merchant::create([
+            'merchant_title' => $request->merchant_title,
+            'merchant_city' => $request->merchant_city,
+            'merchant_address' => $request->merchant_address,
+            'merchant_description' => $request->merchant_description,
+            'merchant_img' => $imgName,
+            'merchant_author' => $request->merchant_author
         ]);
 
-        return redirect('story');
+        return redirect('merchant');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Story  $story
+     * @param  \App\Models\Merchant  $merchant
      * @return \Illuminate\Http\Response
      */
-    public function show(Story $story)
+    public function show(Merchant $merchant)
     {
-        return view('story.show', compact('story'));
+        return view('merchant.show', compact('merchant'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Story  $story
+     * @param  \App\Models\Merchant  $merchant
      * @return \Illuminate\Http\Response
      */
-    public function edit(Story $story)
+    public function edit(Merchant $merchant)
     {
         //
     }
@@ -88,10 +85,10 @@ class StoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Story  $story
+     * @param  \App\Models\Merchant  $merchant
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Story $story)
+    public function update(Request $request, Merchant $merchant)
     {
         //
     }
@@ -99,10 +96,10 @@ class StoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Story  $story
+     * @param  \App\Models\Merchant  $merchant
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Story $story)
+    public function destroy(Merchant $merchant)
     {
         //
     }

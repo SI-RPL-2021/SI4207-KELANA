@@ -19,9 +19,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
 
-<body class="bg-white">
+
     <style>
         .bg-dark {
             transition: 750ms ease;
@@ -33,6 +32,11 @@
         }
 
     </style>
+
+</head>
+
+<body class="bg-white">
+
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
             <div class="container">
@@ -64,10 +68,10 @@
                             <a class="nav-link" href="{{ url('/explore') }}">Explore</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/merchant') }}">Merchant</a>
+                            <a class="nav-link" href="{{ url('/merchant') }}">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/temankelana') }}">Teman Kelana</a>
+                            <a class="nav-link" href="{{ url('/tourguide') }}">Teman Kelana</a>
                         </li>
                     </ul>
 
@@ -90,7 +94,7 @@
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                    Hi, {{ Auth::user()->name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -99,10 +103,16 @@
                                             {{-- <a class="dropdown-item" href="{{ url('payment') }}">Confirmation</a> --}}
                                         @else
                                             <a class="dropdown-item" href="{{ url('detailuser') }}">My Profile</a>
+                                            <a class="dropdown-item" href="{{ route('tourguide.create') }}">Become Teman
+                                                Kelana</a>
+                                            <a class="dropdown-item" href="{{ route('story.create') }}">Post a Story</a>
+                                            <a class="dropdown-item" href="{{ route('merchant.create') }}">Add Your
+                                                Merchant</a>
                                         @endif
                                     @endauth
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                document.getElementById('logout-form').submit();">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                                                                                                                                                        document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -130,6 +140,14 @@
         </footer>
         <!-- Footer -->
 
+        <!-- navbar warna transisi js -->
+        <script>
+            $(window).scroll(function() {
+                $('nav').toggleClass('scolled', $(this).scrollTop() > 10);
+            });
+
+        </script>
+        <!-- navbar warna transisi js -->
     </div>
 </body>
 
