@@ -2,9 +2,15 @@
 
 @section('content')
     <br><br><br><br>
-    <br><br><br><br>
     <div class="container">
-        <a href="{{ route('merchant.create') }}" class="btn btn-primary shadow"> Create Your Merchant Ads!</a>
+        <h1 class="text-center" style=" 
+                    color: #69D1C5; 
+                    -webkit-text-stroke-width: 0.5px;
+                    -webkit-text-stroke-color: black;
+                    ">Take Your Souvenir Home!
+        </h1>
+        <p class="text-center">‘A list of unique and useful memento to bring back from your travels around the world.</p>
+
         <br>
         <br>
         <section>
