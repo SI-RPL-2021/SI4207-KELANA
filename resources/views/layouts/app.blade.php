@@ -71,7 +71,7 @@
                             <a class="nav-link" href="{{ url('/merchant') }}">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/temankelana') }}">Teman Kelana</a>
+                            <a class="nav-link" href="{{ url('/tourguide') }}">Teman Kelana</a>
                         </li>
                     </ul>
 
@@ -103,11 +103,16 @@
                                             {{-- <a class="dropdown-item" href="{{ url('payment') }}">Confirmation</a> --}}
                                         @else
                                             <a class="dropdown-item" href="{{ url('detailuser') }}">My Profile</a>
+                                            <a class="dropdown-item" href="{{ route('tourguide.create') }}">Become Teman
+                                                Kelana</a>
+                                            <a class="dropdown-item" href="{{ route('story.create') }}">Post a Story</a>
+                                            <a class="dropdown-item" href="{{ route('merchant.create') }}">Add Your
+                                                Merchant</a>
                                         @endif
                                     @endauth
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                                                                                                                            document.getElementById('logout-form').submit();">
+                                                                                                                                                                                        document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
