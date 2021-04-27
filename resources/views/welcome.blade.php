@@ -53,8 +53,12 @@
                         <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="">Merchant</a>
                     </li>
                     <li class="nav-item">
+<<<<<<< HEAD
                         <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="">Teman
                             Kelana</a>
+=======
+                        <a class="nav-link" href="{{route("teman_kelana")}}">Teman Kelana</a>
+>>>>>>> irene
                     </li>
                 </ul>
 
