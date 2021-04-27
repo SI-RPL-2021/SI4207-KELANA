@@ -25,7 +25,7 @@ class DetailuserController extends Controller
      */
     public function create()
     {
-        //
+        return view('detailuser.create');
     }
 
     /**
@@ -36,7 +36,22 @@ class DetailuserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(([
+            'user_photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
+        ]));
+
+        $image = $request->file('user_photo');
+        $destinationPath = public_path('/images');
+        $imgName = time() . '.' . $image->getClientOriginalExtension();
+        $image->move($destinationPath, $imgName);
+
+
+        Detailuser::create([
+            'user_id' => $request->user_id,
+            'user_photo' => $imgName
+        ]);
+
+        return redirect('detailuser');
     }
 
     /**
@@ -47,7 +62,7 @@ class DetailuserController extends Controller
      */
     public function show(Detailuser $detailuser)
     {
-        //
+        return view('detailuser.show', compact('detailuser'));
     }
 
     /**
