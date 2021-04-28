@@ -14,7 +14,8 @@ class MerchantController extends Controller
      */
     public function index()
     {
-        return view('merchant.index');
+        $merchant = \App\Models\Merchant::all();
+        return view('merchant.index', compact('merchant'));
     }
 
     /**
@@ -24,7 +25,7 @@ class MerchantController extends Controller
      */
     public function create()
     {
-        //
+        return view('merchant.create');
     }
 
     /**
@@ -35,7 +36,27 @@ class MerchantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(([
+            'merchant_img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
+        ]));
+
+
+        $image = $request->file('merchant_img');
+        $destinationPath = public_path('/images');
+        $imgName = time() . '.' . $image->getClientOriginalExtension();
+        $image->move($destinationPath, $imgName);
+
+
+        Merchant::create([
+            'merchant_title' => $request->merchant_title,
+            'merchant_city' => $request->merchant_city,
+            'merchant_address' => $request->merchant_address,
+            'merchant_description' => $request->merchant_description,
+            'merchant_img' => $imgName,
+            'merchant_author' => $request->merchant_author
+        ]);
+
+        return redirect('merchant');
     }
 
     /**
@@ -46,7 +67,7 @@ class MerchantController extends Controller
      */
     public function show(Merchant $merchant)
     {
-        //
+        return view('merchant.show', compact('merchant'));
     }
 
     /**
