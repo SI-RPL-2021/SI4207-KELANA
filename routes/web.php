@@ -2,12 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-<<<<<<< HEAD
 use App\Http\Controllers\MerchantController;
-=======
-use App\Http\Controllers\DetailuserController;
-use App\Http\Controllers\StoryController;
->>>>>>> d3697d3d5789befe9ab76c039675bba6026f1e7b
 
 /*
 |--------------------------------------------------------------------------
