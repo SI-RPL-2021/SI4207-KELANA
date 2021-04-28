@@ -20,7 +20,6 @@ abstract class DuskTestCase extends BaseTestCase
     public static function prepare()
     {
         if (!static::runningInSail()) {
-
         }
     }
 
@@ -63,6 +62,5 @@ abstract class DuskTestCase extends BaseTestCase
         return isset($_SERVER['DUSK_HEADLESS_DISABLED']) ||
 
             isset($_ENV['DUSK_HEADLESS_DISABLED']);
-
     }
 }
