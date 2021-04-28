@@ -1,31 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
-<br>
-<br>
+    <br>
+    <br>
+    <br>
     <div class="container">
-        <section class="shadow rounded">
-            <div class="container">
-                <div class="row">
-                    <div class="col-4">
-                        <br>
-                        <img src="{{ url('images/myprofile1.png') }}" class="rounded" alt="myprofile">
-                        <br>
-                        <br>
-                    </div>
-                    <div class="col-8">
-                        <br>
-                        <br>
-                        <h3>
-                            {{ Auth::user()->name }}
-                        </h3>
-                        <br>
-                        <h3>
-                            {{ Auth::user()->email }}
-                        </h3>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <h1 class="text-center" style=" 
+                        color: #69D1C5; 
+                        -webkit-text-stroke-width: 0.5px;
+                        -webkit-text-stroke-color: black;
+                        ">Profile Page
+        </h1>
+        <ul class="list-group">
+            @foreach ($detailuser as $dtu)
+                @if ($dtu->user_id == Auth::id())
+                    <a href="{{ route('detailuser.show', $dtu->user_id) }}" class="list-group-item">My Profile</a>
+                @endif
+            @endforeach
+            <a href="{{ route('detailuser.create') }}" class="list-group-item">Add Profile Picture</a>
+            <a class="list-group-item" href="{{ route('guide.create') }}">Become Tour Guide</a>
+        </ul>
+
     </div>
 @endsection

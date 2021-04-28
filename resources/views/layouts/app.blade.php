@@ -102,9 +102,8 @@
                                         @if (auth()->user()->is_admin == 1)
                                             {{-- <a class="dropdown-item" href="{{ url('payment') }}">Confirmation</a> --}}
                                         @else
-                                            <a class="dropdown-item" href="{{ url('detailuser') }}">My Profile</a>
-                                            <a class="dropdown-item" href="{{ route('tourguide.create') }}">Become Teman
-                                                Kelana</a>
+                                            <a class="dropdown-item" href="{{ route('detailuser.index') }}">My Profile</a>
+                                            <a class="dropdown-item" href="{{ route('guide.create') }}">Become Tour Guide</a>
                                             <a class="dropdown-item" href="{{ route('story.create') }}">Post a Story</a>
                                             <a class="dropdown-item" href="{{ route('merchant.create') }}">Add Your
                                                 Merchant</a>
@@ -112,7 +111,7 @@
                                     @endauth
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                                                                                                                                                        document.getElementById('logout-form').submit();">
+                                                                                                                                                                                                        document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

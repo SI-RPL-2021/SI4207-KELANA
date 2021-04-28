@@ -11,6 +11,7 @@ use App\Http\Controllers\HotelController;
 use App\Http\Controllers\ParkController;
 use App\Http\Controllers\FoodController;
 use App\Http\Controllers\TourguideController;
+use App\Http\Controllers\GuideController;
 
 
 /*
@@ -44,4 +45,4 @@ Route::resource('hotel', HotelController::class);
 Route::resource('food', FoodController::class);
 Route::resource('tourguide', TourguideController::class);
 Route::resource('merchant', MerchantController::class);
-
+Route::resource('guide', GuideController::class);

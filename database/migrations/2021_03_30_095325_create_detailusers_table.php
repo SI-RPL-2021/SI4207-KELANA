@@ -16,8 +16,8 @@ class CreateDetailusersTable extends Migration
         Schema::create('detailusers', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
+            $table->string('user_photo');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->binary('photo');
             $table->timestamps();
         });
     }

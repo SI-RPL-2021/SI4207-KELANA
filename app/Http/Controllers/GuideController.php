@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Detailuser;
+use App\Models\Guide;
 use Illuminate\Http\Request;
 
-class DetailuserController extends Controller
+class GuideController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,9 @@ class DetailuserController extends Controller
      */
     public function index()
     {
-        $detailuser = \App\Models\Detailuser::all();
-        return view('detailuser.index', compact('detailuser'));
+        // $guide = \App\Models\Guide::all();
+        $guide = \App\Models\Guide::all();
+        return view('guide.index', compact('guide'));
     }
 
     /**
@@ -25,7 +26,7 @@ class DetailuserController extends Controller
      */
     public function create()
     {
-        return view('detailuser.create');
+        return view('guide.create');
     }
 
     /**
@@ -37,41 +38,50 @@ class DetailuserController extends Controller
     public function store(Request $request)
     {
         $request->validate(([
-            'user_photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
+            'guide_photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
         ]));
 
-        $image = $request->file('user_photo');
+        // $imgName = time() . '.' . request()->image->getClientOriginalExtension();
+
+        $image = $request->file('guide_photo');
         $destinationPath = public_path('/images');
         $imgName = time() . '.' . $image->getClientOriginalExtension();
         $image->move($destinationPath, $imgName);
 
+        // $request->story_img->move(public_path('images'), $imgName);
 
-        Detailuser::create([
-            'user_id' => $request->user_id,
-            'user_photo' => $imgName
+        Guide::create([
+            'guide_name' => $request->guide_name,
+            'guide_location' => $request->guide_location,
+            'guide_price' => $request->guide_price,
+            'guide_email' => $request->guide_email,
+            'guide_instagram' => $request->guide_instagram,
+            'guide_whatsapp' => $request->guide_whatsapp,
+            'guide_photo' => $imgName,
+
         ]);
 
-        return redirect('detailuser');
+        return redirect('story');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Detailuser  $detailuser
+     * @param  \App\Models\Guide  $guide
      * @return \Illuminate\Http\Response
      */
-    public function show(Detailuser $detailuser)
+    public function show(Guide $guide)
     {
-        return view('detailuser.show', compact('detailuser'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Detailuser  $detailuser
+     * @param  \App\Models\Guide  $guide
      * @return \Illuminate\Http\Response
      */
-    public function edit(Detailuser $detailuser)
+    public function edit(Guide $guide)
     {
         //
     }
@@ -80,10 +90,10 @@ class DetailuserController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Detailuser  $detailuser
+     * @param  \App\Models\Guide  $guide
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Detailuser $detailuser)
+    public function update(Request $request, Guide $guide)
     {
         //
     }
@@ -91,10 +101,10 @@ class DetailuserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Detailuser  $detailuser
+     * @param  \App\Models\Guide  $guide
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Detailuser $detailuser)
+    public function destroy(Guide $guide)
     {
         //
     }
