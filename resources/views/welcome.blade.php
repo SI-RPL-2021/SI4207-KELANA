@@ -41,19 +41,20 @@
 
                 <ul class="navbar-nav mx-auto">
                     <li class=" nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Story</a>
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="">Story</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Explore</a>
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="">Explore</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Merchant</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Teman Kelana</a>
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="">Teman
+                            Kelana</a>
                     </li>
                 </ul>
 
@@ -101,7 +102,6 @@
             <br><br><br><br>
             <br><br><br><br>
             <br><br><br><br>
-            <br><br><br><br>
             <div class="container">
                 <h1>
                     "Ubah Wacana
@@ -110,14 +110,43 @@
                 <p class="mb-4">
                     Hey, check this out.
                 </p>
-                <a href="/" class="btn btn-info text-white">See More 'Story'</a>
+                <a href="/" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">See
+                    More 'Story'</a>
             </div>
 
         </div>
 
     </section>
+    <!-- Button trigger modal -->
 
-
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="staticBackdropLabel">Notification</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">Please Login to Continue...</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a type="button" class="btn btn-primary" href="{{ route('login') }}">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <!-- Copyright -->
+    <div class="text-center p-3 fixed-bottom text-white">
+        © 2021 Copyright
+        <a class="text-white" href="{{ url('/') }}">Kelana.co.id</a>
+    </div>
+    <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
