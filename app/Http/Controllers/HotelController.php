@@ -14,7 +14,8 @@ class HotelController extends Controller
      */
     public function index()
     {
-        return view('hotel.index');
+        $hotel = \App\Models\Hotel::all();
+        return view('hotel.index', compact('hotel'));
     }
 
     /**
@@ -35,7 +36,27 @@ class HotelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(([
+            'hotel_img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
+        ]));
+
+        // $imgName = time() . '.' . request()->image->getClientOriginalExtension();
+
+        $image = $request->file('hotel_img');
+        $destinationPath = public_path('/images');
+        $imgName = time() . '.' . $image->getClientOriginalExtension();
+        $image->move($destinationPath, $imgName);
+
+        // $request->story_img->move(public_path('images'), $imgName);
+
+        Hotel::create([
+            'hotel_title' => $request->hotel_title,
+            'hotel_date' => $request->hotel_date,
+            'hotel_description' => $request->hotel_description,
+            'hotel_img' => $imgName,
+        ]);
+
+        return redirect('hotel');
     }
 
     /**
