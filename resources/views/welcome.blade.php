@@ -46,13 +46,9 @@
                         <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="">Explore</a>
                     </li>
                     <li class="nav-item">
-<<<<<<< HEAD
-                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="">Shop</a>
-=======
 
                         <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="">Shop</a>
 
->>>>>>> 2af26a27b38031d08e94acab39191ed5db63d3b4
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="">Teman

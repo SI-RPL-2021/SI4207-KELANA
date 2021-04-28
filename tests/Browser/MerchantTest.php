@@ -10,7 +10,7 @@ class MerchantTest extends DuskTestCase
 {
     /**
      * A Dusk test example.
-     * @group Merchant
+     * 
      * @return void
      */
     public function testExample()
@@ -22,9 +22,14 @@ class MerchantTest extends DuskTestCase
                 ->type('password', '12345678')
                 ->press('Login')
                 ->assertPathIs('/user')
-                ->visit('/merchant')
-                ->assertSee('Merchant')
-                ->press('Merchant')
+                ->visit('/merchant/create')
+                ->assertSee('Add your Merchant')
+                ->type('merchant_title', 'Peuyeum')
+                ->attach('merchant_img', __DIR__.'/Components/Gambar Jurnal.png')
+                ->type('merchant_description', 'Peuyeum Bandung')
+                ->type('merchant_city', 'Bandung')
+                ->type('merchant_address', 'Bojongsoang')
+                ->press('Submit')
                 ->assertPathIs('/merchant');
         });
     }
