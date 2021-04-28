@@ -15,6 +15,9 @@ class CreateParksTable extends Migration
     {
         Schema::create('parks', function (Blueprint $table) {
             $table->id();
+            $table->string('park_title');
+            $table->longText('park_description');
+            $table->string('park_img');
             $table->timestamps();
         });
     }

@@ -14,7 +14,8 @@ class ParkController extends Controller
      */
     public function index()
     {
-        return view('park.index');
+        $park = \App\Models\Park::all();
+        return view('park.index', compact('park'));
     }
 
     /**
@@ -35,7 +36,27 @@ class ParkController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(([
+            'park_img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
+        ]));
+
+        // $imgName = time() . '.' . request()->image->getClientOriginalExtension();
+
+        $image = $request->file('park_img');
+        $destinationPath = public_path('/images');
+        $imgName = time() . '.' . $image->getClientOriginalExtension();
+        $image->move($destinationPath, $imgName);
+
+        // $request->story_img->move(public_path('images'), $imgName);
+
+        Park::create([
+            'park_title' => $request->park_title,
+            'park_date' => $request->park_date,
+            'park_description' => $request->park_description,
+            'park_img' => $imgName,
+        ]);
+
+        return redirect('park');
     }
 
     /**
@@ -46,7 +67,7 @@ class ParkController extends Controller
      */
     public function show(Park $park)
     {
-        //
+        return view('park.show', compact('park'));
     }
 
     /**

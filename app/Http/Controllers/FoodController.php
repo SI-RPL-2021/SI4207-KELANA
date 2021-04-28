@@ -14,7 +14,8 @@ class FoodController extends Controller
      */
     public function index()
     {
-        return view('food.index');
+        $food = \App\Models\Food::all();
+        return view('food.index', compact('food'));
     }
 
     /**
@@ -35,7 +36,25 @@ class FoodController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(([
+            'food_img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
+        ]));
+
+        // $imgName = time() . '.' . request()->image->getClientOriginalExtension();
+
+        $image = $request->file('food_img');
+        $destinationPath = public_path('/images');
+        $imgName = time() . '.' . $image->getClientOriginalExtension();
+        $image->move($destinationPath, $imgName);
+
+        // $request->story_img->move(public_path('images'), $imgName);
+
+        Food::create([
+            'food_title' => $request->food_title,
+            'food_date' => $request->food_date,
+            'food_description' => $request->food_description,
+            'food_img' => $imgName,
+        ]);
     }
 
     /**
