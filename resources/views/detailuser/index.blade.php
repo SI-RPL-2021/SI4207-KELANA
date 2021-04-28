@@ -6,10 +6,10 @@
     <br>
     <div class="container">
         <h1 class="text-center" style=" 
-                color: #69D1C5; 
-                -webkit-text-stroke-width: 0.5px;
-                -webkit-text-stroke-color: black;
-                ">Profile Page
+                        color: #69D1C5; 
+                        -webkit-text-stroke-width: 0.5px;
+                        -webkit-text-stroke-color: black;
+                        ">Profile Page
         </h1>
         <ul class="list-group">
             @foreach ($detailuser as $dtu)
@@ -18,8 +18,7 @@
                 @endif
             @endforeach
             <a href="{{ route('detailuser.create') }}" class="list-group-item">Add Profile Picture</a>
-            <a class="list-group-item" href="{{ route('tourguide.create') }}">Become Teman
-                Kelana</a>
+            <a class="list-group-item" href="{{ route('guide.create') }}">Become Tour Guide</a>
         </ul>
 
     </div>

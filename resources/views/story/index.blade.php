@@ -5,10 +5,10 @@
     <br><br><br><br>
     <div class="container">
         <h1 class="text-center" style=" 
-            color: #69D1C5; 
-            -webkit-text-stroke-width: 0.5px;
-            -webkit-text-stroke-color: black;
-            ">Tell Us Your Journey!
+                color: #69D1C5; 
+                -webkit-text-stroke-width: 0.5px;
+                -webkit-text-stroke-color: black;
+                ">Tell Us Your Journey!
         </h1>
         <p class="text-center">‘Cause Sharing is Caring! Drop you experience right here.</p>
 
