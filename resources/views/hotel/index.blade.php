@@ -10,7 +10,7 @@
 <div style="margin-left: 20px; margin-right: 20px;">
 
     <div class="input-group mb-3" style="width: 300px">
-        <input type="text" class="form-control" placeholder="Filter" aria-label="Filter" aria-describedby="button-addon2">
+        <input type="text" class="form-control border-info" placeholder="Filter" aria-label="Filter" aria-describedby="button-addon2">
     </div>
     
     <section>
@@ -25,11 +25,12 @@
             $rowCount++;
             ?>
             <div class="col-md-<?php echo $bootstrapColWidth; ?>">
-                <div class="card">
+                <div class="card border-info">
                     <img src="/images/{{ $htl->hotel_img }}" class="card-img-top img-fluid" alt="hotel_img">
                     <div class="card-body">
                         <h5 class="card-title">{{ $htl->hotel_title }}</h5>
-                        <a href="{{ route('hotel.show', $htl->id) }}" class="btn btn-primary">Read more</a>
+                        <img style="width: 200px" src="{{ url('images/rate.png') }}" alt="">
+                        <h6 style="margin-top: 10px">{{ $htl->hotel_description }}</h6>
                     </div>
                 </div>
                 <br>
