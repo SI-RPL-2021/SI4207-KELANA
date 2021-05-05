@@ -31,6 +31,7 @@
                         <h5 class="card-title">{{ $prk->park_title }}</h5>
                         <img style="width: 200px" src="{{ url('images/rate.png') }}" alt="">
                         <h6 style="margin-top: 10px">{{ $prk->park_description }}</h6>
+                        <a href="{{ route('park.show', $prk->id) }}" class="btn btn-link">read more</a>
                     </div>
                 </div>
                 <br>

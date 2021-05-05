@@ -29,7 +29,9 @@
                     <img src="/images/{{ $fod->food_img }}" class="card-img-top img-fluid" alt="food_img">
                     <div class="card-body">
                         <h5 class="card-title">{{ $fod->food_title }}</h5>
-                        <a href="{{ route('food.show', $fod->id) }}" class="btn btn-primary">Read more</a>
+                        <img style="width: 200px" src="{{ url('images/rate.png') }}" alt="">
+                        <h6 style="margin-top: 10px">{{ $fod->food_description }}</h6>
+                        <a href="{{ route('food.show', $fod->id) }}" class="btn btn-link">read more</a>
                     </div>
                 </div>
                 <br>
