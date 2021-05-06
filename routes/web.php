@@ -12,6 +12,7 @@ use App\Http\Controllers\ParkController;
 use App\Http\Controllers\FoodController;
 use App\Http\Controllers\TourguideController;
 use App\Http\Controllers\GuideController;
+use App\Http\Controllers\KelanafriendController;
 
 
 /*
@@ -46,3 +47,4 @@ Route::resource('food', FoodController::class);
 Route::resource('tourguide', TourguideController::class);
 Route::resource('merchant', MerchantController::class);
 Route::resource('guide', GuideController::class);
+Route::resource('temankelana', KelanafriendController::class);
