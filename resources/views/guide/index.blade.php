@@ -4,10 +4,10 @@
     <div class="container">
         <br><br><br><br>
         <h1 class="text-center" style=" 
-                color: #69D1C5; 
-                -webkit-text-stroke-width: 0.5px;
-                -webkit-text-stroke-color: black;
-                ">
+                                        color: #69D1C5; 
+                                        -webkit-text-stroke-width: 0.5px;
+                                        -webkit-text-stroke-color: black;
+                                        ">
             Tour
             Guides
         </h1>
@@ -25,9 +25,9 @@
                 $rowCount++;
                 ?>
                 <div class="col-md-<?php echo $bootstrapColWidth; ?>">
-                    <div class="card shadow rounded-5 ">
-                        <div class="card-header">
-                            <img src="/images/{{ $gd->guide_photo }}" class="card-img-top" alt="guide_photo"
+                    <div class="card shadow rounded-3">
+                        <div class="card-img-top">
+                            <img src="/images/{{ $gd->guide_photo }}" class="card-img-top img-fluid" alt="guide_photo"
                                 style="width:35px, height:35px;">
                         </div>
                         <div class="card-body">

@@ -49,9 +49,10 @@ class MerchantController extends Controller
 
         Merchant::create([
             'merchant_title' => $request->merchant_title,
-            'merchant_city' => $request->merchant_city,
+            'merchant_name' => $request->merchant_name,
             'merchant_address' => $request->merchant_address,
-            'merchant_description' => $request->merchant_description,
+            'merchant_instagram' => $request->merchant_instagram,
+            'merchant_number' => $request->merchant_number,
             'merchant_img' => $imgName,
             'merchant_author' => $request->merchant_author
         ]);

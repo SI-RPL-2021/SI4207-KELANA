@@ -5,10 +5,10 @@
     <br><br><br><br>
     <div class="container">
         <h1 class="text-center" style=" 
-                color: #69D1C5; 
-                -webkit-text-stroke-width: 0.5px;
-                -webkit-text-stroke-color: black;
-                ">Tell Us Your Journey!
+                    color: #69D1C5; 
+                    -webkit-text-stroke-width: 0.5px;
+                    -webkit-text-stroke-color: black;
+                    ">Tell Us Your Journey!
         </h1>
         <p class="text-center">‘Cause Sharing is Caring! Drop you experience right here.</p>
 
@@ -34,7 +34,8 @@
                             <p class="text-right">Cerita liburan di {{ $str->story_destination }}</p>
                             <p class="text-right">Ditulis oleh : {{ $str->story_author }}</p>
                             <div class="text-right">
-                                <a href="{{ route('story.show', $str->id) }}" class="btn btn-info">Read more</a>
+                                <a href="{{ route('story.show', $str->id) }}" class="btn btn-info text-white">Read
+                                    more</a>
                             </div>
                         </div>
                     </div>
