@@ -103,6 +103,7 @@
                                 @else
                                 <a class="dropdown-item" href="{{ route('detailuser.index') }}">Profile</a>
                                 <a class="dropdown-item" href="{{ route('guide.create') }}">Become Tour Guide</a>
+                                <a class="dropdown-item" href="{{ route('tourguide.list') }}">My Guide</a>
                                 <a class="dropdown-item" href="{{ route('story.create') }}">Post a Story</a>
                                 <a class="dropdown-item" href="{{ route('merchant.create') }}">Add Your
                                     Merchant</a>
@@ -145,6 +146,8 @@
         </script>
         <!-- navbar warna transisi js -->
     </div>
+
+
 </body>
 
 </html>

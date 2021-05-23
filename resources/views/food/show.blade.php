@@ -20,6 +20,8 @@
             </div>
         </div>
     </section>
+    <br>
+    <a href="{{ route('food.index') }}" class="btn btn-primary">Back</a>
 </div>
 
 
