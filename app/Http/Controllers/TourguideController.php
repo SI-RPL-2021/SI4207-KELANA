@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Tourguide;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class TourguideController extends Controller
 {
@@ -15,6 +17,7 @@ class TourguideController extends Controller
     public function index()
     {
         $tourguide = \App\Models\Tourguide::all();
+        // $tourguide = DB::table('tourguides')->where('id', Auth::id());
         return view('tourguide.index', compact('tourguide'));
     }
 
@@ -82,5 +85,26 @@ class TourguideController extends Controller
     public function destroy(Tourguide $tourguide)
     {
         //
+    }
+
+    public function request(Request $request)
+    {
+        Tourguide::create([
+            'user_id' => Auth::id(),
+            'guide_id' => $request->id,
+            'tour_date' => $request->request_date,
+        ]);
+        return redirect()->route('guide.index');
+    }
+
+    public function list()
+    {
+        $tourguide = DB::table('tourguides')
+            ->join('guides', 'tourguides.guide_id', '=', 'guides.id')
+            ->join('users', 'tourguides.user_id', '=', 'users.id')
+            ->select('tourguides.*', 'guides.*', 'users.*')
+            ->where('tourguides.user_id', Auth::id())
+            ->get();
+        return view('tourguide.list', compact('tourguide'));
     }
 }
