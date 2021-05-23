@@ -48,3 +48,5 @@ Route::resource('tourguide', TourguideController::class);
 Route::resource('merchant', MerchantController::class);
 Route::resource('guide', GuideController::class);
 Route::resource('temankelana', KelanafriendController::class);
+
+Route::get('/search', [ParkController::class, 'search'])->name('search');
