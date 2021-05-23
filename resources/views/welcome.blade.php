@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=NotoSerif">
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
     <title>Mari Jelajahi Nusantara Bersama Kelana</title>
 </head>
@@ -23,15 +22,12 @@
         .bg-dark.scolled {
             background: #eeeeee !important;
         }
-
     </style>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
         <div class="container">
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -53,38 +49,31 @@
                         <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="">Shop</a>
                     </li>
                     <li class="nav-item">
-<<<<<<< HEAD
                         <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="">Teman
                             Kelana</a>
-=======
-                        <a class="nav-link" href="{{route("teman_kelana")}}">Teman Kelana</a>
->>>>>>> irene
                     </li>
                 </ul>
 
                 <ul class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-person" viewBox="0 0 16 16">
-                            <path
-                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                    <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
                         </svg>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         @if (Route::has('login'))
-                            @auth
-                                @if (auth()->user()->is_admin == 1)
-                                    <li><a class="dropdown-item" href="{{ url('admin') }}">Home</a></li>
-                                @else
-                                    <li><a class="dropdown-item" href="{{ url('user') }}">Home</a></li>
-                                @endif
-                            @else
-                                <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
-                                @if (Route::has('register'))
-                                    <li><a class="dropdown-item" href="{{ route('register') }}">Register</a></li>
-                                @endif
-                            @endauth
+                        @auth
+                        @if (auth()->user()->is_admin == 1)
+                        <li><a class="dropdown-item" href="{{ url('admin') }}">Home</a></li>
+                        @else
+                        <li><a class="dropdown-item" href="{{ url('user') }}">Home</a></li>
+                        @endif
+                        @else
+                        <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
+                        @if (Route::has('register'))
+                        <li><a class="dropdown-item" href="{{ route('register') }}">Register</a></li>
+                        @endif
+                        @endauth
                         @endif
                     </ul>
                 </ul>
@@ -124,8 +113,7 @@
     <!-- Button trigger modal -->
 
     <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -154,8 +142,7 @@
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
     </script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
