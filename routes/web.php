@@ -50,3 +50,6 @@ Route::resource('guide', GuideController::class);
 Route::resource('temankelana', KelanafriendController::class);
 
 Route::get('/search', [ParkController::class, 'search'])->name('search');
+
+Route::post('/request', [TourguideController::class, 'request'])->name('guide.request');
+Route::get('/mytourguide', [TourguideController::class, 'list'])->name('tourguide.list');
