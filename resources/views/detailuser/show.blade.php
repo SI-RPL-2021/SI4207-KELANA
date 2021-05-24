@@ -25,7 +25,8 @@
                         <h3>
                             {{ Auth::user()->email }}
                         </h3>
-                        <a href="{{ route('detailuser.create') }}" class="btn btn-info">Add Profile Picture</a>
+                        <a href="{{ route('detailuser.create') }}" class="btn btn-info text-white">Add Profile
+                            Picture</a>
                     </div>
                 </div>
             </div>

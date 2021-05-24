@@ -5,10 +5,10 @@
     <br><br><br><br>
     <div class="container">
         <h1 class="text-center" style=" 
-                    color: #69D1C5; 
-                    -webkit-text-stroke-width: 0.5px;
-                    -webkit-text-stroke-color: black;
-                    ">Tell Us Your Journey!
+                                    color: #69D1C5; 
+                                    -webkit-text-stroke-width: 0.5px;
+                                    -webkit-text-stroke-color: black;
+                                    ">Tell Us Your Journey!
         </h1>
         <p class="text-center">‘Cause Sharing is Caring! Drop you experience right here.</p>
 
@@ -27,7 +27,7 @@
                 $rowCount++;
                 ?>
                 <div class="col-md-<?php echo $bootstrapColWidth; ?>">
-                    <div class="card">
+                    <div class="card h-100 shadow rounded">
                         <img src="/images/{{ $str->story_img }}" class="card-img-top img-fluid" alt="story_img">
                         <div class="card-body">
                             <h5 class="card-title text-center">{{ $str->story_title }}</h5>
@@ -39,10 +39,11 @@
                             </div>
                         </div>
                     </div>
-                    <br>
+
                 </div>
                 <?php if ($rowCount % $numOfCols == 0) { ?>
-            </div> <?php }
+            </div>
+            <br> <?php }
             }
             ?>
 
