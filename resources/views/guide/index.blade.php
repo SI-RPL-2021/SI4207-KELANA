@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <br><br><br><br>
     <h1 class="text-center" style=" 
@@ -25,11 +26,11 @@
                                                                 $rowCount++;
                                                                     ?>
                 <div class="col-md-<?php echo $bootstrapColWidth; ?>">
-                    <div class="card shadow rounded-3">
+                    <div class="card h-100 shadow rounded-3 ">
                         <div class="card-img-top">
                             <img src="/images/{{ $gd->guide_photo }}" class="card-img-top img-fluid" alt="guide_photo" style="width:35px, height:35px;">
                         </div>
-                        <div class="card-body">
+                        <div class="card-body ">
                             <p> <b>{{ $gd->guide_name }}</b> </p>
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
