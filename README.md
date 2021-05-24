@@ -8,6 +8,12 @@ Kelana.co.id merupakan aplikasi penyedia informasi bagi para backpacker. dengan 
 
 Project Capstone
 
+## Update
+
+```bash
+ -  Done Sprint 1
+```
+
 ## How to Clone
 
 ```bash
@@ -24,4 +30,8 @@ ______________________________________
 - Run php artisan serve
 - Go to your localhost
 ______________________________________
+```
 
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
