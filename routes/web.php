@@ -13,6 +13,7 @@ use App\Http\Controllers\FoodController;
 use App\Http\Controllers\TourguideController;
 use App\Http\Controllers\GuideController;
 use App\Http\Controllers\KelanafriendController;
+use App\Http\Controllers\CheapTripController;
 
 
 /*
@@ -48,3 +49,9 @@ Route::resource('tourguide', TourguideController::class);
 Route::resource('merchant', MerchantController::class);
 Route::resource('guide', GuideController::class);
 Route::resource('temankelana', KelanafriendController::class);
+Route::resource('cheapTrip', CheapTripController::class);
+
+Route::get('/search', [ParkController::class, 'search'])->name('search');
+
+Route::post('/request', [TourguideController::class, 'request'])->name('guide.request');
+Route::get('/mytourguide', [TourguideController::class, 'list'])->name('tourguide.list');

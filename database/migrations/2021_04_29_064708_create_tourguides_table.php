@@ -15,6 +15,11 @@ class CreateTourguidesTable extends Migration
     {
         Schema::create('tourguides', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('guide_id');
+            $table->date('tour_date');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('guide_id')->references('id')->on('guides');
             $table->timestamps();
         });
     }
