@@ -17,7 +17,7 @@
             $numOfCols = 6;
             $rowCount = 0;
             $bootstrapColWidth = 12 / $numOfCols;
-            foreach ($cheapTrip as $ct) {
+            foreach ($cheapTrip3 as $ct) {
 
                 if ($rowCount % $numOfCols == 0) { ?> <div class="row"> <?php }
                                                                     $rowCount++;
