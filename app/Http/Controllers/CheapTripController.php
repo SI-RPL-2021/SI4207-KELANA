@@ -16,7 +16,7 @@ class CheapTripController extends Controller
      */
     public function index()
     {
-        $cheapTrip = DB::table('cheaptrip')
+        $cheapTrip1 = DB::table('cheaptrip')
             ->join('guides', 'cheaptrip.guide_id', '=', 'guides.id')
             ->join('parks as p1', 'cheaptrip.park_id1', '=', 'p1.id')
             ->join('parks as p2', 'cheaptrip.park_id2', '=', 'p2.id')
@@ -27,27 +27,25 @@ class CheapTripController extends Controller
             ->select('cheaptrip.*', 'guides.*', 'p1.park_title as park1', 'p2.park_title as park2', 'p3.park_title as park3')
             ->get();
 
-        if ($cheapTrip->isEmpty()) {
-            $cheapTrip = DB::table('cheaptrip')
-                ->join('guides', 'cheaptrip.guide_id', '=', 'guides.id')
-                ->join('parks as p1', 'cheaptrip.park_id1', '=', 'p1.id')
-                ->join('parks as p2', 'cheaptrip.park_id2', '=', 'p2.id')
-                ->select('cheaptrip.*', 'guides.*', 'p1.park_title as park1', 'p2.park_title as park2', 'p2.park_title as park3')
-                ->whereNotNull('cheaptrip.park_id1')
-                ->whereNotNull('cheaptrip.park_id2')
-                ->get();
-        }
+        $cheapTrip2 = DB::table('cheaptrip')
+            ->join('guides', 'cheaptrip.guide_id', '=', 'guides.id')
+            ->join('parks as p1', 'cheaptrip.park_id1', '=', 'p1.id')
+            ->join('parks as p2', 'cheaptrip.park_id2', '=', 'p2.id')
+            ->select('cheaptrip.*', 'guides.*', 'p1.park_title as park1', 'p2.park_title as park2', 'p2.park_title as park3')
+            ->whereNotNull('cheaptrip.park_id1')
+            ->whereNotNull('cheaptrip.park_id2')
+            ->get();
 
-        if ($cheapTrip->isEmpty()) {
-            $cheapTrip = DB::table('cheaptrip')
-                ->join('guides', 'cheaptrip.guide_id', '=', 'guides.id')
-                ->join('parks as p1', 'cheaptrip.park_id1', '=', 'p1.id')
-                ->select('cheaptrip.*', 'guides.*', 'p1.park_title as park1', 'p1.park_title as park2', 'p1.park_title as park3')
-                ->whereNotNull('cheaptrip.park_id1')
-                ->get();
-        }
+        $cheapTrip3 = DB::table('cheaptrip')
+            ->join('guides', 'cheaptrip.guide_id', '=', 'guides.id')
+            ->join('parks as p1', 'cheaptrip.park_id1', '=', 'p1.id')
+            ->select('cheaptrip.*', 'guides.*', 'p1.park_title as park1', 'p1.park_title as park2', 'p1.park_title as park3')
+            ->whereNotNull('cheaptrip.park_id1')
+            ->get();
 
-        return view('cheapTrip.index', compact('cheapTrip'));
+        // $cheapTrip = array_merge($cheapTrip1, $cheapTrip2);
+
+        return view('cheapTrip.index', compact('cheapTrip1', 'cheapTrip2', 'cheapTrip3'));
     }
 
     /**
