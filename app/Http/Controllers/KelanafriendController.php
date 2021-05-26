@@ -14,8 +14,10 @@ class KelanafriendController extends Controller
      */
     public function index()
     {
-        return view('temankelana.index');
+        $kelanafriend = \App\Models\Kelanafriend::all();
+        return view('temankelana.index', compact('kelanafriend'));
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -24,7 +26,7 @@ class KelanafriendController extends Controller
      */
     public function create()
     {
-        //
+        return view('temankelana.create');
     }
 
     /**
@@ -35,7 +37,26 @@ class KelanafriendController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(([
+            'friend_img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
+        ]));
+
+
+        $image = $request->file('friend_img');
+        $destinationPath = public_path('/images');
+        $imgName = time() . '.' . $image->getClientOriginalExtension();
+        $image->move($destinationPath, $imgName);
+
+        Kelanafriend::create([
+            'friend_name' => $request->friend_name,
+            'friend_location' => $request->friend_location,
+            'friend_instagram' => $request->friend_instagram,
+            'friend_whatsapp' => $request->friend_whatsapp,
+            'friend_img' => $imgName,
+
+        ]);
+
+        return redirect('temankelana');
     }
 
     /**
