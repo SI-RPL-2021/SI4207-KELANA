@@ -15,6 +15,11 @@ class CreateKelanafriendsTable extends Migration
     {
         Schema::create('kelanafriends', function (Blueprint $table) {
             $table->id();
+            $table->string('friend_name');
+            $table->string('friend_img');
+            $table->string('friend_location');
+            $table->string('friend_instagram');
+            $table->string('friend_whatsapp');
             $table->timestamps();
         });
     }
