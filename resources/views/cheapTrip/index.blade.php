@@ -12,6 +12,19 @@
     <p class="text-center">Find Recomendation Trip</p>
     <br><br>
     <div style="margin-left: 20px; margin-right: 20px;">
+        <form class="form" method="get" action="{{ route('filter.cheapTrip') }}">
+            <div class="form-group w-50">
+                <label for="filter-price">Range Price</label>
+                <select class="form-control w-75 d-inline" name="filterprice" id="filter-price">
+                    <option value="">all</option>
+                    <option value="1">
+                        < Rp.1000.000</option>
+                    <option value="2">Rp.1000.000 - Rp.5000.000</option>
+                    <option value="3">> Rp.5000.000</option>
+                </select>
+                <button type="submit" class="btn btn-primary mb-1">Filter</button>
+            </div>
+        </form>
         <section>
             <?php
             $numOfCols = 6;
