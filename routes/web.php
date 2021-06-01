@@ -54,5 +54,7 @@ Route::resource('cheapTrip', CheapTripController::class);
 Route::get('/search', [ParkController::class, 'search'])->name('search');
 Route::get('/search/food', [FoodController::class, 'search'])->name('search.food');
 
+Route::get('/filter/park', [ParkController::class, 'filter'])->name('filter.park');
+
 Route::post('/request', [TourguideController::class, 'request'])->name('guide.request');
 Route::get('/mytourguide', [TourguideController::class, 'list'])->name('tourguide.list');

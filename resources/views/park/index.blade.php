@@ -16,6 +16,19 @@
         </div>
     </form>
 
+    <form class="form" method="get" action="{{ route('filter.park') }}">
+        <div class="form-group w-50">
+            <label for="filter-location">Location</label>
+            <select class="form-control w-75 d-inline" name="filterLocation" id="filter-location">
+                <option value="">all</option>
+                <option value="bali">bali</option>
+                <option value="magelang">magelang</option>
+                <option value="medan">medan</option>
+            </select>
+            <button type="submit" class="btn btn-primary mb-1">Filter</button>
+        </div>
+    </form>
+
 
     <section>
         <?php
@@ -26,8 +39,8 @@
         foreach ($park as $prk) {
 
             if ($rowCount % $numOfCols == 0) { ?> <div class="row"> <?php }
-                                                            $rowCount++;
-                                                                ?>
+                                                                $rowCount++;
+                                                                    ?>
                 <div class="col-md-<?php echo $bootstrapColWidth; ?>">
                     <div class="card border-info">
                         <img src="/images/{{ $prk->park_img }}" class="card-img-top img-fluid" alt="park_img">
