@@ -52,6 +52,7 @@ Route::resource('temankelana', KelanafriendController::class);
 Route::resource('cheapTrip', CheapTripController::class);
 
 Route::get('/search', [ParkController::class, 'search'])->name('search');
+Route::get('/search/food', [FoodController::class, 'search'])->name('search.food');
 
 Route::post('/request', [TourguideController::class, 'request'])->name('guide.request');
 Route::get('/mytourguide', [TourguideController::class, 'list'])->name('tourguide.list');
