@@ -69,7 +69,11 @@
             <div class="position-sticky pt-3">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ url('admin') }}">
+                        <a class="nav-link " href="{{ url('user') }}" target="_blank" rel="noopener noreferrer">Open
+                            Kelana Website</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="{{ url('admin') }}">
                             <span data-feather="home"></span>
                             Dashboard
                         </a>
