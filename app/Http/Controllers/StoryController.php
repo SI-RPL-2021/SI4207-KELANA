@@ -18,6 +18,12 @@ class StoryController extends Controller
         return view('story.index', compact('story'));
     }
 
+    public function adminstory()
+    {
+        $story = \App\Models\Story::all();
+        return view('admin.story', compact('story'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
