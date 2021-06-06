@@ -108,8 +108,9 @@ class StoryController extends Controller
      * @param  \App\Models\Story  $story
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Story $story)
+    public function destroy($id)
     {
-        //
+        Story::find($id)->delete();
+        return redirect('admin')->with(['success' => 'Berhasil Dihapus']);
     }
 }
