@@ -13,6 +13,25 @@
                 <strong>{{ $message }}</strong>
             </div>
         @endif
+        <div class="row row-cols-2">
+            <div class="col">
+
+            </div>
+            <div class="col">
+
+            </div>
+            <div class="col">
+
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+
     </div>
+@endsection
+@section('script')
+
+
 
 @endsection
