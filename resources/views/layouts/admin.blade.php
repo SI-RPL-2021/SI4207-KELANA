@@ -39,7 +39,6 @@
 
     </style>
 
-
     <!-- Custom styles for this template -->
     <link href="dashboard.css" rel="stylesheet">
 </head>
@@ -119,7 +118,6 @@
         </div>
     </div>
 
-
     <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
@@ -130,7 +128,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
         integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous">
     </script>
-    <script src="dashboard.js"></script>
+    @yield('script')
 </body>
 
 </html>
