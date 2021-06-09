@@ -39,6 +39,7 @@
         $bootstrapColWidth = 12 / $numOfCols;
         foreach ($park as $prk) {
 
+
             if ($rowCount % $numOfCols == 0) { ?> <div class="row"> <?php }
                                                                 $rowCount++;
                                                                     ?>
@@ -50,6 +51,7 @@
                             <img style="width: 200px" src="{{ url('images/rate.png') }}" alt="">
                             <h6 style="margin-top: 10px">{{ $prk->park_description }}</h6>
                         </div>
+
                     </div>
                     <br>
                 </div>
