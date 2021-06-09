@@ -18,6 +18,12 @@ class StoryController extends Controller
         return view('story.index', compact('story'));
     }
 
+    public function adminstory()
+    {
+        $story = \App\Models\Story::all();
+        return view('admin.story', compact('story'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -102,8 +108,9 @@ class StoryController extends Controller
      * @param  \App\Models\Story  $story
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Story $story)
+    public function destroy($id)
     {
-        //
+        Story::find($id)->delete();
+        return redirect('admin')->with(['success' => 'Berhasil Dihapus']);
     }
 }

@@ -12,6 +12,10 @@ use App\Http\Controllers\ParkController;
 use App\Http\Controllers\FoodController;
 use App\Http\Controllers\TourguideController;
 use App\Http\Controllers\GuideController;
+use App\Http\Controllers\KelanafriendController;
+use App\Http\Controllers\CheapTripController;
+use App\Http\Controllers\UserController;
+use ArielMejiaDev\LarapexCharts\LarapexChart;
 
 
 /*
@@ -33,8 +37,18 @@ Route::get('/', function () {
 //auth
 Auth::routes();
 Route::get('/user', [App\Http\Controllers\HomeController::class, 'index'])->name('user');
-Route::get('/admin', [App\Http\Controllers\HomeController::class, 'handleAdmin'])->name('admin.route')->middleware('admin');
 //auth
+
+//admin
+Route::get('/admin', [App\Http\Controllers\HomeController::class, 'handleAdmin'])->name('admin.route')->middleware('admin');
+
+//chart
+Route::get('admin.dashboard', [App\Http\Controllers\HomeController::class, 'dashboard']);
+//chart
+
+Route::get('admin.story', [StoryController::class, 'adminstory']);
+Route::get('admin.user', [UserController::class, 'adminuser']);
+//admin
 
 Route::resource('detailuser', DetailuserController::class);
 
@@ -46,3 +60,14 @@ Route::resource('food', FoodController::class);
 Route::resource('tourguide', TourguideController::class);
 Route::resource('merchant', MerchantController::class);
 Route::resource('guide', GuideController::class);
+Route::resource('temankelana', KelanafriendController::class);
+Route::resource('cheapTrip', CheapTripController::class);
+
+Route::get('/search', [ParkController::class, 'search'])->name('search');
+Route::get('/search/food', [FoodController::class, 'search'])->name('search.food');
+
+Route::get('/filter/park', [ParkController::class, 'filter'])->name('filter.park');
+Route::get('/filter/cheapTrip', [CheapTripController::class, 'filter'])->name('filter.cheapTrip');
+
+Route::post('/request', [TourguideController::class, 'request'])->name('guide.request');
+Route::get('/mytourguide', [TourguideController::class, 'list'])->name('tourguide.list');

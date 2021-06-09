@@ -1,12 +1,19 @@
 # Kelana.co.id
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p align ="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 Kelana.co.id merupakan aplikasi penyedia informasi bagi para backpacker. dengan aplikasi ini para backpacker bisa mencari informasi seputar tempat wisata, destinasi, cinderamata, dan lain lain. serta para backpacker dapat menghubungi tour guide dalam kegiatan berwisatanya.
 
 ## Peruntukan
 
 Project Capstone
+
+## Update
+
+```bash
+ -  Done Sprint 1
+ -  Done Sprint 2
+```
 
 ## How to Clone
 
@@ -24,4 +31,8 @@ ______________________________________
 - Run php artisan serve
 - Go to your localhost
 ______________________________________
+```
 
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)

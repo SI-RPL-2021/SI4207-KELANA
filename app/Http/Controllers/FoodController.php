@@ -63,8 +63,10 @@ class FoodController extends Controller
      * @param  \App\Models\Food  $food
      * @return \Illuminate\Http\Response
      */
-    public function show(Food $food)
+    public function show($id)
     {
+        $food = Food::find($id);
+
         return view('food.show', compact('food'));
     }
 
@@ -100,5 +102,16 @@ class FoodController extends Controller
     public function destroy(Food $food)
     {
         //
+    }
+
+    public function search(Request $request)
+    {
+        $search = $request->input('search');
+
+        $food = Food::query()
+            ->where('food_title', 'LIKE', "%{$search}%")
+            ->get();
+
+        return view('food.index', compact('food'));
     }
 }

@@ -103,4 +103,26 @@ class ParkController extends Controller
     {
         //
     }
+
+    public function search(Request $request)
+    {
+        $search = $request->input('search');
+
+        $park = Park::query()
+            ->where('park_title', 'LIKE', "%{$search}%")
+            ->get();
+
+        return view('park.index', compact('park'));
+    }
+
+    public function filter(Request $request)
+    {
+        $filter = $request->input('filterLocation');
+
+        $park = Park::query()
+            ->where('park_location', 'LIKE', "%{$filter}%")
+            ->get();
+
+        return view('park.index', compact('park'));
+    }
 }

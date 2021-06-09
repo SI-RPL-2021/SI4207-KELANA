@@ -1,17 +1,23 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Dashboard</div>
+    <div class="jumbotron">
+        <br>
+        <br>
 
-                    <div class="card-body">
-                        Hey! you are admin.
-                    </div>
-                </div>
-            </div>
-        </div>
+        <section class=" inline-block">
+            <h1>Welcome Admin</h1>
+            <img src="{{ url('images/logo1.png') }}" alt="Kelana" width="190" height="45">
+        </section>
+
+        <br>
+        <br>
+        <img src="{{ url('images/landing2.jpg') }}" alt="" class="img img-fluid">
+
     </div>
+
+@endsection
+@section('script')
+
+
 @endsection
