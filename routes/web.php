@@ -15,6 +15,7 @@ use App\Http\Controllers\GuideController;
 use App\Http\Controllers\KelanafriendController;
 use App\Http\Controllers\CheapTripController;
 use App\Http\Controllers\UserController;
+use ArielMejiaDev\LarapexCharts\LarapexChart;
 
 
 /*
@@ -36,10 +37,15 @@ Route::get('/', function () {
 //auth
 Auth::routes();
 Route::get('/user', [App\Http\Controllers\HomeController::class, 'index'])->name('user');
-Route::get('/admin', [App\Http\Controllers\HomeController::class, 'handleAdmin'])->name('admin.route')->middleware('admin');
 //auth
 
 //admin
+Route::get('/admin', [App\Http\Controllers\HomeController::class, 'handleAdmin'])->name('admin.route')->middleware('admin');
+
+//chart
+Route::get('admin.dashboard', [App\Http\Controllers\HomeController::class, 'dashboard']);
+//chart
+
 Route::get('admin.story', [StoryController::class, 'adminstory']);
 Route::get('admin.user', [UserController::class, 'adminuser']);
 //admin
