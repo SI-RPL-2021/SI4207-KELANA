@@ -18,7 +18,7 @@ class CreateCheapTripTable extends Migration
             $table->string('cheapTrip_title');
             $table->longText('cheapTrip_description');
             $table->string('cheapTrip_img');
-            $table->string('cheapTrip_price');
+            $table->integer('cheapTrip_price');
             $table->unsignedBigInteger('guide_id');
             $table->unsignedBigInteger('park_id1');
             $table->unsignedBigInteger('park_id2')->nullable();

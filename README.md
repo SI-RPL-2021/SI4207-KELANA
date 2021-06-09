@@ -12,6 +12,7 @@ Project Capstone
 
 ```bash
  -  Done Sprint 1
+ -  Done Sprint 2
 ```
 
 ## How to Clone
