@@ -31,6 +31,7 @@
                         <h5 class="card-title">{{ $htl->hotel_title }}</h5>
                         <img style="width: 200px" src="{{ url('images/rate.png') }}" alt="">
                         <h6 style="margin-top: 10px">{{ $htl->hotel_description }}</h6>
+                        <a href="{{ route('hotel.show', $htl->id) }}" class="btn btn-link">read more</a>
                     </div>
                 </div>
                 <br>

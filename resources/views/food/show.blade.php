@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 <br><br><br>
 <h1 class="text-center" style="color: #69D1C5; -webkit-text-stroke-width: 0.5px; -webkit-text-stroke-color: black;">Kuliner</h1>
 <h5 style="text-align: center">Chop, chop! Your food is here~</h5>
@@ -26,3 +27,4 @@
 
 
 @endsection
+

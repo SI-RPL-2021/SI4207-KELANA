@@ -4,6 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+
     "content-hash": "ce4ff180a9fda98a35ae13a8a56bc6e3",
     "packages": [
         {
@@ -172,6 +173,7 @@
             "time": "2021-01-20T22:51:39+00:00"
         },
         {
+
             "name": "chartisan/php",
             "version": "1.2.1",
             "source": {
@@ -1013,6 +1015,7 @@
         },
         {
             "name": "laravel/framework",
+
             "version": "v8.44.0",
             "source": {
                 "type": "git",
@@ -1023,6 +1026,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/7b3b27dc8911ab02a69731af2ba97b5130b2ddb8",
                 "reference": "7b3b27dc8911ab02a69731af2ba97b5130b2ddb8",
+
                 "shasum": ""
             },
             "require": {
@@ -1177,6 +1181,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
+
             "time": "2021-05-27T16:46:06+00:00"
         },
         {
@@ -1249,6 +1254,7 @@
         },
         {
             "name": "laravel/ui",
+
             "version": "v3.3.0",
             "source": {
                 "type": "git",
@@ -1301,6 +1307,7 @@
                 "ui"
             ],
             "support": {
+
                 "source": "https://github.com/laravel/ui/tree/v3.3.0"
             },
             "time": "2021-05-25T16:45:33+00:00"
@@ -1317,6 +1324,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/7d70d2f19c84bcc16275ea47edabee24747352eb",
                 "reference": "7d70d2f19c84bcc16275ea47edabee24747352eb",
+
                 "shasum": ""
             },
             "require": {
@@ -1404,7 +1412,9 @@
                     "type": "tidelift"
                 }
             ],
+
             "time": "2021-05-12T11:39:41+00:00"
+
         },
         {
             "name": "league/flysystem",
@@ -2605,6 +2615,7 @@
         },
         {
             "name": "symfony/console",
+
             "version": "v5.3.0",
             "source": {
                 "type": "git",
@@ -2615,6 +2626,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/console/zipball/058553870f7809087fa80fa734704a21b9bcaeb2",
                 "reference": "058553870f7809087fa80fa734704a21b9bcaeb2",
+
                 "shasum": ""
             },
             "require": {
@@ -2683,7 +2695,9 @@
                 "terminal"
             ],
             "support": {
+
                 "source": "https://github.com/symfony/console/tree/v5.3.0"
+
             },
             "funding": [
                 {
@@ -2699,7 +2713,9 @@
                     "type": "tidelift"
                 }
             ],
+
             "time": "2021-05-26T17:43:10+00:00"
+
         },
         {
             "name": "symfony/css-selector",
@@ -2835,6 +2851,7 @@
         },
         {
             "name": "symfony/error-handler",
+
             "version": "v5.3.0",
             "source": {
                 "type": "git",
@@ -2845,6 +2862,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/error-handler/zipball/0e6768b8c0dcef26df087df2bbbaa143867a59b2",
                 "reference": "0e6768b8c0dcef26df087df2bbbaa143867a59b2",
+
                 "shasum": ""
             },
             "require": {
@@ -2884,7 +2902,9 @@
             "description": "Provides tools to manage errors and ease debugging PHP code",
             "homepage": "https://symfony.com",
             "support": {
+
                 "source": "https://github.com/symfony/error-handler/tree/v5.3.0"
+
             },
             "funding": [
                 {
@@ -2900,7 +2920,9 @@
                     "type": "tidelift"
                 }
             ],
+
             "time": "2021-05-26T17:43:10+00:00"
+
         },
         {
             "name": "symfony/event-dispatcher",
@@ -3280,6 +3302,7 @@
         },
         {
             "name": "symfony/http-kernel",
+
             "version": "v5.3.0",
             "source": {
                 "type": "git",
@@ -3290,6 +3313,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/http-kernel/zipball/f8e8f5391b6909e2f0ba8c12220ab7af3050eb4f",
                 "reference": "f8e8f5391b6909e2f0ba8c12220ab7af3050eb4f",
+
                 "shasum": ""
             },
             "require": {
@@ -3372,7 +3396,9 @@
             "description": "Provides a structured process for converting a Request into a Response",
             "homepage": "https://symfony.com",
             "support": {
+
                 "source": "https://github.com/symfony/http-kernel/tree/v5.3.0"
+
             },
             "funding": [
                 {
@@ -3388,6 +3414,7 @@
                     "type": "tidelift"
                 }
             ],
+
             "time": "2021-05-31T10:44:03+00:00"
         },
         {
@@ -3455,7 +3482,9 @@
                 "mime-type"
             ],
             "support": {
+
                 "source": "https://github.com/symfony/mime/tree/v5.3.0"
+
             },
             "funding": [
                 {
@@ -3471,7 +3500,9 @@
                     "type": "tidelift"
                 }
             ],
+
             "time": "2021-05-26T17:43:10+00:00"
+
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -4266,6 +4297,7 @@
         },
         {
             "name": "symfony/routing",
+
             "version": "v5.3.0",
             "source": {
                 "type": "git",
@@ -4276,6 +4308,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/routing/zipball/368e81376a8e049c37cb80ae87dbfbf411279199",
                 "reference": "368e81376a8e049c37cb80ae87dbfbf411279199",
+
                 "shasum": ""
             },
             "require": {
@@ -4336,7 +4369,9 @@
                 "url"
             ],
             "support": {
+
                 "source": "https://github.com/symfony/routing/tree/v5.3.0"
+
             },
             "funding": [
                 {
@@ -4352,7 +4387,9 @@
                     "type": "tidelift"
                 }
             ],
+
             "time": "2021-05-26T17:43:10+00:00"
+
         },
         {
             "name": "symfony/service-contracts",
@@ -4435,6 +4472,7 @@
         },
         {
             "name": "symfony/string",
+
             "version": "v5.3.0",
             "source": {
                 "type": "git",
@@ -4498,6 +4536,7 @@
                 "utf8"
             ],
             "support": {
+
                 "source": "https://github.com/symfony/string/tree/v5.3.0"
             },
             "funding": [
@@ -4514,6 +4553,7 @@
                     "type": "tidelift"
                 }
             ],
+
             "time": "2021-05-26T17:43:10+00:00"
         },
         {
@@ -4593,7 +4633,9 @@
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
             "support": {
+
                 "source": "https://github.com/symfony/translation/tree/v5.3.0"
+
             },
             "funding": [
                 {
@@ -4609,7 +4651,9 @@
                     "type": "tidelift"
                 }
             ],
+
             "time": "2021-05-29T22:28:28+00:00"
+
         },
         {
             "name": "symfony/translation-contracts",
@@ -4691,6 +4735,7 @@
         },
         {
             "name": "symfony/var-dumper",
+
             "version": "v5.3.0",
             "source": {
                 "type": "git",
@@ -4701,6 +4746,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/var-dumper/zipball/1d3953e627fe4b5f6df503f356b6545ada6351f3",
                 "reference": "1d3953e627fe4b5f6df503f356b6545ada6351f3",
+
                 "shasum": ""
             },
             "require": {
@@ -4759,7 +4805,9 @@
                 "dump"
             ],
             "support": {
+
                 "source": "https://github.com/symfony/var-dumper/tree/v5.3.0"
+
             },
             "funding": [
                 {
@@ -4775,7 +4823,9 @@
                     "type": "tidelift"
                 }
             ],
+
             "time": "2021-05-27T12:28:50+00:00"
+
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -5115,6 +5165,7 @@
         },
         {
             "name": "facade/flare-client-php",
+
             "version": "1.8.1",
             "source": {
                 "type": "git",
@@ -5125,6 +5176,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/facade/flare-client-php/zipball/47b639dc02bcfdfc4ebb83de703856fa01e35f5f",
                 "reference": "47b639dc02bcfdfc4ebb83de703856fa01e35f5f",
+
                 "shasum": ""
             },
             "require": {
@@ -5168,7 +5220,9 @@
             ],
             "support": {
                 "issues": "https://github.com/facade/flare-client-php/issues",
+
                 "source": "https://github.com/facade/flare-client-php/tree/1.8.1"
+
             },
             "funding": [
                 {
@@ -5176,6 +5230,7 @@
                     "type": "github"
                 }
             ],
+
             "time": "2021-05-31T19:23:29+00:00"
         },
         {
@@ -5190,6 +5245,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/facade/ignition/zipball/e7db3b601ce742568b92648818ef903904d20164",
                 "reference": "e7db3b601ce742568b92648818ef903904d20164",
+
                 "shasum": ""
             },
             "require": {
@@ -5253,6 +5309,7 @@
                 "issues": "https://github.com/facade/ignition/issues",
                 "source": "https://github.com/facade/ignition"
             },
+
             "time": "2021-05-05T06:45:12+00:00"
         },
         {
@@ -5570,6 +5627,7 @@
         },
         {
             "name": "laravel/sail",
+
             "version": "v1.7.0",
             "source": {
                 "type": "git",
@@ -5580,6 +5638,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/sail/zipball/d1f703d73f782af5427697cdc5023395cd341963",
                 "reference": "d1f703d73f782af5427697cdc5023395cd341963",
+
                 "shasum": ""
             },
             "require": {
@@ -5626,7 +5685,9 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
+
             "time": "2021-05-25T16:41:13+00:00"
+
         },
         {
             "name": "mockery/mockery",
@@ -5959,6 +6020,7 @@
         },
         {
             "name": "php-webdriver/webdriver",
+
             "version": "1.11.1",
             "source": {
                 "type": "git",
@@ -5996,6 +6058,7 @@
                 "ext-SimpleXML": "For Firefox profile creation"
             },
             "type": "library",
+
             "autoload": {
                 "psr-4": {
                     "Facebook\\WebDriver\\": "lib/"
@@ -6019,6 +6082,7 @@
             ],
             "support": {
                 "issues": "https://github.com/php-webdriver/php-webdriver/issues",
+
                 "source": "https://github.com/php-webdriver/php-webdriver/tree/1.11.1"
             },
             "time": "2021-05-21T15:12:49+00:00"

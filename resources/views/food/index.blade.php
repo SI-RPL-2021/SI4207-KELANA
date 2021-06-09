@@ -24,6 +24,7 @@
         $bootstrapColWidth = 12 / $numOfCols;
         foreach ($food as $fod) {
 
+
             if ($rowCount % $numOfCols == 0) { ?> <div class="row"> <?php }
                                                                 $rowCount++;
                                                                     ?>
