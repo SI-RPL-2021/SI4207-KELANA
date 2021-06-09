@@ -103,4 +103,15 @@ class FoodController extends Controller
     {
         //
     }
+
+    public function search(Request $request)
+    {
+        $search = $request->input('search');
+
+        $food = Food::query()
+            ->where('food_title', 'LIKE', "%{$search}%")
+            ->get();
+
+        return view('food.index', compact('food'));
+    }
 }

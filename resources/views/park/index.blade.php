@@ -9,10 +9,24 @@
 
 <div style="margin-left: 20px; margin-right: 20px;">
 
-    <form class="form" method="get" action="{{ route('search') }}">
+    <!-- <form class="form" method="get" action="{{ route('search') }}">
         <div class="form-group w-50 mb-3">
             <input type="text" name="search" class="form-control w-75 d-inline" id="search" placeholder="Search">
             <button type="submit" class="btn btn-primary mb-1">Search</button>
+        </div>
+    </form> -->
+
+    <!-- untuk filter lokassi -->
+    <form class="form" method="get" action="{{ route('filter.park') }}">
+        <div class="form-group w-50">
+            <label for="filter-location">Location</label>
+            <select class="form-control w-75 d-inline" name="filterLocation" id="filter-location">
+                <option value="">Pilih Lokasi</option>
+                <option value="bali">Bali</option>
+                <option value="magelang">Magelang</option>
+                <option value="medan">Medan</option>
+            </select>
+            <button type="submit" class="btn btn-primary mb-1">Filter</button>
         </div>
     </form>
 
@@ -26,8 +40,8 @@
         foreach ($park as $prk) {
 
             if ($rowCount % $numOfCols == 0) { ?> <div class="row"> <?php }
-                                                            $rowCount++;
-                                                                ?>
+                                                                $rowCount++;
+                                                                    ?>
                 <div class="col-md-<?php echo $bootstrapColWidth; ?>">
                     <div class="card border-info">
                         <img src="/images/{{ $prk->park_img }}" class="card-img-top img-fluid" alt="park_img">
