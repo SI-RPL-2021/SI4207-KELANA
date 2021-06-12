@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 656dccab8eba02b808845415b8304a086bacb8a9
 use Illuminate\Http\Request;
 
 
@@ -22,7 +25,10 @@ class UserController extends Controller
     {
         $user = \App\Models\User::all();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 656dccab8eba02b808845415b8304a086bacb8a9
         return view('admin.user', compact('user'));
     }
 

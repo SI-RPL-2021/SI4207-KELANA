@@ -25,7 +25,7 @@ class HotelController extends Controller
      */
     public function create()
     {
-        //
+        return view('hotel.create');
     }
 
     /**
@@ -53,6 +53,9 @@ class HotelController extends Controller
             'hotel_title' => $request->hotel_title,
             'hotel_date' => $request->hotel_date,
             'hotel_description' => $request->hotel_description,
+            'hotel_location' => $request->hotel_location,
+            'hotel_price' => $request->hotel_price,
+            'hotel_contact' => $request->contact,
             'hotel_img' => $imgName,
         ]);
 
