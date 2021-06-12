@@ -4,17 +4,19 @@
     <br><br><br>
     <br>
     <div class="container">
-        <a href="{{ url('park') }}" class="btn btn-info text-white">Back</a>
+        <a href="{{ url('food') }}" class="btn btn-info text-white">Back</a>
         <br><br>
-        <h1 class="text-center" style="color: #69D1C5; -webkit-text-stroke-width: 0.5px; -webkit-text-stroke-color: black;">{{ $park->park_title }}</h1>
-        <h5 style="text-align: center">lokasi</h5> 
+        <h1 class=" text-center">{{ $food->food_name }}</h1>
         <i class="bi bi-pin-fill"></i>
+        <p class=" text-center">Destinasi Wisata <b>{{ $food->food_destination }}</b></p>
+        <p>Ditulis Oleh : <b>{{ $food->food_price }}</b></p>
+        <p>Posted in : {{ $food->created_at }}</p>
         <section class="shadow rounded">
             <div class="container">
                 <br>
-                <img src="/images/{{ $park->park_img }}" class="img-fluid rounded mx-auto d-block" alt="park_img">
+                <img src="/images/{{ $food->food_img }}" class="img-fluid rounded mx-auto d-block" alt="food_img">
                 <hr>
-                <p> {{ $park->park_description }}</p>
+                <p> {{ $food->food_description }}</p>
                 <br>
             </div>
         </section>
