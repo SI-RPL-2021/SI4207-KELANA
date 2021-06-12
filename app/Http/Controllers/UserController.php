@@ -3,15 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\Explore;
-use App\Models\Food;
-use App\Models\Guide;
-use App\Models\Hotel;
-use App\Models\Kelanafriend;
-use App\Models\Merchant;
-use App\Models\Park;
-use App\Models\Story;
-use App\Models\Tourguide;
 use Illuminate\Http\Request;
 
 
@@ -29,17 +20,8 @@ class UserController extends Controller
     public function adminuser()
     {
         $user = \App\Models\User::all();
-        $explore = \App\Models\Explore::all();
-        $food = \App\Models\Food::all();
-        $guide = \App\Models\Guide::all();
-        $hotel = \App\Models\Hotel::all();
-        $kelanafriend = \App\Models\Kelanafriend::all();
-        $merchant = \App\Models\Merchant::all();
-        $park = \App\Models\Park::all();
-        $story = \App\Models\Story::all();
-        $tourguide = \App\Models\Tourguide::all();
 
-        return view('admin.user', compact('user', 'explore', 'food', 'guide', 'hotel', 'kelanafriend', 'merchant', 'park', 'story', 'tourguide'));
+        return view('admin.user', compact('user'));
     }
 
     /**

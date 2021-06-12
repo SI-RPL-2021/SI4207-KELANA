@@ -6,9 +6,11 @@
     <div class="container">
         <a href="{{ url('hotel') }}" class="btn btn-info text-white">Back</a>
         <br><br>
-        <h1 class="text-center" style="color: #69D1C5; -webkit-text-stroke-width: 0.5px; -webkit-text-stroke-color: black;">{{ $hotel->hotel_title }}</h1>
-        <h5 style="text-align: center">lokasi</h5> 
+        <h1 class=" text-center">{{ $hotel->hotel_name }}</h1>
         <i class="bi bi-pin-fill"></i>
+        <p class=" text-center">Destinasi Wisata <b>{{ $hotel->hotel_destination }}</b></p>
+        <p>Ditulis Oleh : <b>{{ $hotel->hotel_price }}</b></p>
+        <p>Posted in : {{ $hotel->created_at }}</p>
         <section class="shadow rounded">
             <div class="container">
                 <br>
