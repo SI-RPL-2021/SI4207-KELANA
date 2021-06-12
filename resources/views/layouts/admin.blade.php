@@ -106,6 +106,21 @@
                                 Feedback Toureguide
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('food.create') }}">
+                                Add Explore Food Content
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('park.create') }}">
+                                Add Explore Park Content
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('hotel.create') }}">
+                                Add Explore Hotel Content
+                            </a>
+                        </li>
                     </ul>
                     </ul>
                 </div>

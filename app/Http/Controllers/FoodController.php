@@ -25,7 +25,7 @@ class FoodController extends Controller
      */
     public function create()
     {
-        //
+        return view('food.create');
     }
 
     /**
@@ -50,11 +50,16 @@ class FoodController extends Controller
         // $request->story_img->move(public_path('images'), $imgName);
 
         Food::create([
-            'food_title' => $request->food_title,
-            'food_date' => $request->food_date,
+            'food_name' => $request->food_name,
+            'food_restaurant' => $request->food_restaurant,
+            'food_contact' => $request->food_contact,
+            'food_location' => $request->food_location,
             'food_description' => $request->food_description,
+            'food_price' => $request->food_price,
             'food_img' => $imgName,
         ]);
+
+        return redirect('food');
     }
 
     /**
