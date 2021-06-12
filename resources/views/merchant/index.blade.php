@@ -4,10 +4,10 @@
     <br><br><br><br>
     <div class="container">
         <h1 class="text-center" style=" 
-                                                                            color: #69D1C5; 
-                                                                            -webkit-text-stroke-width: 0.5px;
-                                                                            -webkit-text-stroke-color: black;
-                                                                            ">Take Your Souvenir Home!
+            color: #69D1C5; 
+            -webkit-text-stroke-width: 0.5px;
+            -webkit-text-stroke-color: black;
+            ">Take Your Souvenir Home!
         </h1>
         <p class="text-center">‘A list of unique and useful memento to bring back from your travels around the world.</p>
 
