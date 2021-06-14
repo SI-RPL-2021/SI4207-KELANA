@@ -77,6 +77,9 @@ Route::get('/mytourguide', [TourguideController::class, 'list'])->name('tourguid
 
 Route::get('/verifyGuide', [GuideController::class, 'verifyGuide'])->name('verifyGuide');
 Route::post('/updateverifyGuide', [GuideController::class, 'updateVerifyGuide'])->name('guide.verify');
+<<<<<<< HEAD
 
 Route::get('/listFeedback', [TourguideController::class, 'listFeedback'])->name('listFeedback');
 Route::post('/feedbackGuide', [TourguideController::class, 'feedbackGuide'])->name('guide.feedback');
+=======
+>>>>>>> irene
