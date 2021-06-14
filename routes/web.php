@@ -74,3 +74,6 @@ Route::get('/filter/cheapTrip', [CheapTripController::class, 'filter'])->name('f
 
 Route::post('/request', [TourguideController::class, 'request'])->name('guide.request');
 Route::get('/mytourguide', [TourguideController::class, 'list'])->name('tourguide.list');
+
+Route::get('/verifyGuide', [GuideController::class, 'verifyGuide'])->name('verifyGuide');
+Route::post('/updateverifyGuide', [GuideController::class, 'updateVerifyGuide'])->name('guide.verify');
