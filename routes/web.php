@@ -16,6 +16,8 @@ use App\Http\Controllers\KelanafriendController;
 use App\Http\Controllers\CheapTripController;
 use App\Http\Controllers\UserController;
 use ArielMejiaDev\LarapexCharts\LarapexChart;
+use App\Http\Controllers\CustomerServiceController;
+
 
 
 /*
@@ -62,6 +64,7 @@ Route::resource('merchant', MerchantController::class);
 Route::resource('guide', GuideController::class);
 Route::resource('temankelana', KelanafriendController::class);
 Route::resource('cheapTrip', CheapTripController::class);
+Route::resource('customerService', CustomerServiceController::class);
 
 Route::get('/search', [ParkController::class, 'search'])->name('search');
 Route::get('/search/food', [FoodController::class, 'search'])->name('search.food');
@@ -71,3 +74,9 @@ Route::get('/filter/cheapTrip', [CheapTripController::class, 'filter'])->name('f
 
 Route::post('/request', [TourguideController::class, 'request'])->name('guide.request');
 Route::get('/mytourguide', [TourguideController::class, 'list'])->name('tourguide.list');
+
+Route::get('/verifyGuide', [GuideController::class, 'verifyGuide'])->name('verifyGuide');
+Route::post('/updateverifyGuide', [GuideController::class, 'updateVerifyGuide'])->name('guide.verify');
+
+Route::get('/listFeedback', [TourguideController::class, 'listFeedback'])->name('listFeedback');
+Route::post('/feedbackGuide', [TourguideController::class, 'feedbackGuide'])->name('guide.feedback');

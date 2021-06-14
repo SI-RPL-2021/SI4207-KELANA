@@ -18,6 +18,8 @@ class CreateTourguidesTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('guide_id');
             $table->date('tour_date');
+            $table->string('feedback')->nullable();
+            $table->string('ulasan')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('guide_id')->references('id')->on('guides');
             $table->timestamps();

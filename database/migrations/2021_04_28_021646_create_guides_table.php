@@ -22,6 +22,7 @@ class CreateGuidesTable extends Migration
             $table->string('guide_instagram');
             $table->string('guide_whatsapp');
             $table->string('guide_photo');
+            $table->string('guide_status');
             $table->timestamps();
         });
     }
