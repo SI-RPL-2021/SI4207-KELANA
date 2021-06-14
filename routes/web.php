@@ -74,3 +74,6 @@ Route::get('/filter/cheapTrip', [CheapTripController::class, 'filter'])->name('f
 
 Route::post('/request', [TourguideController::class, 'request'])->name('guide.request');
 Route::get('/mytourguide', [TourguideController::class, 'list'])->name('tourguide.list');
+
+Route::get('/listFeedback', [TourguideController::class, 'listFeedback'])->name('listFeedback');
+Route::post('/feedbackGuide', [TourguideController::class, 'feedbackGuide'])->name('guide.feedback');
