@@ -16,6 +16,8 @@ use App\Http\Controllers\KelanafriendController;
 use App\Http\Controllers\CheapTripController;
 use App\Http\Controllers\UserController;
 use ArielMejiaDev\LarapexCharts\LarapexChart;
+use App\Http\Controllers\CustomerServiceController;
+
 
 
 /*
@@ -62,6 +64,7 @@ Route::resource('merchant', MerchantController::class);
 Route::resource('guide', GuideController::class);
 Route::resource('temankelana', KelanafriendController::class);
 Route::resource('cheapTrip', CheapTripController::class);
+Route::resource('customerService', CustomerServiceController::class);
 
 Route::get('/search', [ParkController::class, 'search'])->name('search');
 Route::get('/search/food', [FoodController::class, 'search'])->name('search.food');
