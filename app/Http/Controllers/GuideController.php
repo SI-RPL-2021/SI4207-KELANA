@@ -49,17 +49,29 @@ class GuideController extends Controller
         $image->move($destinationPath, $imgName);
 
         // $request->story_img->move(public_path('images'), $imgName);
-
-        Guide::create([
-            'guide_name' => $request->guide_name,
-            'guide_location' => $request->guide_location,
-            'guide_price' => $request->guide_price,
-            'guide_email' => $request->guide_email,
-            'guide_instagram' => $request->guide_instagram,
-            'guide_whatsapp' => $request->guide_whatsapp,
-            'guide_photo' => $imgName,
-
-        ]);
+        if ($request->status == "verfy") {
+            Guide::create([
+                'guide_name' => $request->guide_name,
+                'guide_location' => $request->guide_location,
+                'guide_price' => $request->guide_price,
+                'guide_email' => $request->guide_email,
+                'guide_instagram' => $request->guide_instagram,
+                'guide_whatsapp' => $request->guide_whatsapp,
+                'guide_photo' => $imgName,
+                'guide_status' => 'not verify',
+            ]);
+        } else {
+            Guide::create([
+                'guide_name' => $request->guide_name,
+                'guide_location' => $request->guide_location,
+                'guide_price' => $request->guide_price,
+                'guide_email' => $request->guide_email,
+                'guide_instagram' => $request->guide_instagram,
+                'guide_whatsapp' => $request->guide_whatsapp,
+                'guide_photo' => $imgName,
+                'guide_status' => 'dont verify',
+            ]);
+        }
 
         return redirect('story');
     }
@@ -107,5 +119,22 @@ class GuideController extends Controller
     public function destroy(Guide $guide)
     {
         //
+    }
+
+    public function verifyGuide()
+    {
+        $guide = \App\Models\Guide::all();
+        return view('admin.guide', compact('guide'));
+    }
+
+    public function updateVerifyGuide(Request $request)
+    {
+        $guide = Guide::findOrFail($request->id);
+        if ($guide) {
+            $guide->guide_status = 'verify';
+            $guide->save();
+        }
+
+        return redirect()->route('verifyGuide');
     }
 }
