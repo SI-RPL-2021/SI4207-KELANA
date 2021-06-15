@@ -107,4 +107,26 @@ class TourguideController extends Controller
             ->get();
         return view('tourguide.list', compact('tourguide'));
     }
+
+    public function feedbackGuide(Request $request)
+    {
+        $tourguide = Tourguide::findOrFail($request->id);
+        if ($tourguide) {
+            $tourguide->feedback = $request->stars;
+            $tourguide->ulasan = $request->ulasan;
+            $tourguide->save();
+        }
+
+        return redirect()->route('tourguide.list');
+    }
+
+    public function listFeedback()
+    {
+        $tourguide = DB::table('tourguides')
+            ->join('guides', 'tourguides.guide_id', '=', 'guides.id')
+            ->join('users', 'tourguides.user_id', '=', 'users.id')
+            ->select('tourguides.*', 'guides.guide_name', 'users.name')
+            ->get();
+        return view('admin.feedback', compact('tourguide'));
+    }
 }
