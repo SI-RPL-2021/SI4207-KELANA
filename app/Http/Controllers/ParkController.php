@@ -50,7 +50,7 @@ class ParkController extends Controller
         // $request->story_img->move(public_path('images'), $imgName);
 
         Park::create([
-            'park_title' => $request->park_title,
+            'park_name' => $request->park_name,
             'park_date' => $request->park_date,
             'park_description' => $request->park_description,
             'park_price' => $request->park_price,

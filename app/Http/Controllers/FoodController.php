@@ -113,8 +113,19 @@ class FoodController extends Controller
     {
         $search = $request->input('search');
 
-        $food = Food::query()
+        $food = food::query()
             ->where('food_title', 'LIKE', "%{$search}%")
+            ->get();
+
+        return view('food.index', compact('food'));
+    }
+
+    public function filter(Request $request)
+    {
+        $filter = $request->input('filterLocation');
+
+        $food = food::query()
+            ->where('food_location', 'LIKE', "%{$filter}%")
             ->get();
 
         return view('food.index', compact('food'));
