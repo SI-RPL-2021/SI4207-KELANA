@@ -102,17 +102,17 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('food.create') }}">
-                                Add Explore Food Content
+                                Food Content
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('park.create') }}">
-                                Add Explore Park Content
+                                Park Content
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('hotel.create') }}">
-                                Add Explore Hotel Content
+                                Hotel Content
                             </a>
                         </li>
                         <li class="nav-item">

@@ -62,5 +62,46 @@
             <button href="submit" class="btn btn-dark">Post !</button>
             <a href="{{ url('admin.index') }}" class="btn btn-danger">Back</a>
         </form>
+
+        <br><br><br>
+
+        <h1>Food Post Management</h1>
+        <br>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">id</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Restaurant</th>
+                    <th scope="col">Contact</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Harga</th>
+                    <th scope="col">Upload</th>
+                    <th scope="col"> Action </th>
+                </tr>
+            </thead>
+            <tbody>
+                {{-- @foreach ($food as $fuud)
+                    <tr>
+                        <th scope="row">{{ $loop->iteration }}</th>
+                        <td>{{ $fuud->id }}</td>
+                        <td>{{ $fuud->food_name }}</td>
+                        <td>{{ $fuud->food_restaurant }}</td>
+                        <td>{{ $fuud->food_contact }}</td>
+                        <td>{{ $fuud->food_location }}</td>
+                        <td>{{ $fuud->food_price }}</td>
+                        <td>{{ $fuud->updated_at }}</td>
+                        <td>
+                            <form action="{{ $fuud->id }}" method="post" class="d-inline">
+                                @method('delete')
+                                @csrf
+                                <button class="btn btn-danger" type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach --}}
+            </tbody>
+        </table>
     </div>
 @endsection

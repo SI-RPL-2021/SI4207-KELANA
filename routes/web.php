@@ -68,8 +68,12 @@ Route::resource('customerService', CustomerServiceController::class);
 
 Route::get('/search', [ParkController::class, 'search'])->name('search');
 Route::get('/search/food', [FoodController::class, 'search'])->name('search.food');
+Route::get('/search/park', [ParkController::class, 'search'])->name('search.park');
+Route::get('/search/hotel', [HotelController::class, 'search'])->name('search.hotel');
 
 Route::get('/filter/park', [ParkController::class, 'filter'])->name('filter.park');
+Route::get('/filter/food', [FoodController::class, 'filter'])->name('filter.food');
+Route::get('/filter/hotel', [HotelController::class, 'filter'])->name('filter.hotel');
 Route::get('/filter/cheapTrip', [CheapTripController::class, 'filter'])->name('filter.cheapTrip');
 
 Route::post('/request', [TourguideController::class, 'request'])->name('guide.request');
