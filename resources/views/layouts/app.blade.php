@@ -19,6 +19,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/rating.css') }}" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script></script>
 
 
     <style>
@@ -146,7 +148,18 @@
         </script>
         <!-- navbar warna transisi js -->
     </div>
-
+<script>
+$(document).on("click", ".open-AddBookDialog", function () {
+     var myBookId = $(this).data('id');
+     $(".modal-body #bookId").val( myBookId );
+});
+</script>
+<script>
+$(document).on("click", ".open-feedbackDialog", function () {
+     var myBookId = $(this).data('id');
+     $(".modal-body #GuideId").val( myBookId );
+});
+</script>
 
 </body>
 
