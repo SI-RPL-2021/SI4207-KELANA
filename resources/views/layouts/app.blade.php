@@ -30,7 +30,6 @@
         .bg-dark.scolled {
             background: #eeeeee !important;
         }
-
     </style>
 
 </head>
@@ -43,9 +42,7 @@
                 <a class="navbar-brand" href="{{ url('/user') }}">
                     <img src="{{ url('images/logo1.png') }}" alt="Kelana" width="190" height="45">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="{{ __('Toggle navigation') }}">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -54,11 +51,11 @@
                     <ul class="navbar-nav mx-auto">
                         <li class=" nav-item">
                             @auth
-                                @if (auth()->user()->is_admin == 1)
-                            <li><a class="nav-link" href="{{ url('admin') }}">Home</a></li>
+                            @if (auth()->user()->is_admin == 1)
+                        <li><a class="nav-link" href="{{ url('admin') }}">Home</a></li>
                         @else
-                            <li><a class="nav-link" href="{{ url('user') }}">Home</a></li>
-                            @endif
+                        <li><a class="nav-link" href="{{ url('user') }}">Home</a></li>
+                        @endif
                         @endauth
                         </li>
                         <li class="nav-item">
@@ -82,46 +79,45 @@
                     <ul class="navbar-nav me-auto">
                         <!-- Authentication Links -->
                         @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
+                        @if (Route::has('login'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </li>
+                        @endif
 
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
+                        @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        </li>
+                        @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    Hi, {{ Auth::user()->name }}
-                                </a>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                Hi, {{ Auth::user()->name }}
+                            </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    @auth
-                                        @if (auth()->user()->is_admin == 1)
-                                        @else
-                                            <a class="dropdown-item" href="{{ route('detailuser.index') }}">Profile</a>
-                                            <a class="dropdown-item" href="{{ route('guide.create') }}">Become Tour Guide</a>
-                                            <a class="dropdown-item" href="{{ route('tourguide.list') }}">My Guide</a>
-                                            <a class="dropdown-item" href="{{ route('story.create') }}">Post a Story</a>
-                                            <a class="dropdown-item" href="{{ route('merchant.create') }}">Add Your
-                                                Merchant</a>
-                                        @endif
-                                    @endauth
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                @auth
+                                @if (auth()->user()->is_admin == 1)
+                                @else
+                                <a class="dropdown-item" href="{{ route('detailuser.index') }}">Profile</a>
+                                <a class="dropdown-item" href="{{ route('guide.create') }}">Become Tour Guide</a>
+                                <a class="dropdown-item" href="{{ route('tourguide.list') }}">My Guide</a>
+                                <a class="dropdown-item" href="{{ route('story.create') }}">Post a Story</a>
+                                <a class="dropdown-item" href="{{ route('customerService.create') }}">Contact Us</a>
+                                <a class="dropdown-item" href="{{ route('merchant.create') }}">Add Your
+                                    Merchant</a>
+                                @endif
+                                @endauth
+                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                                                                                                                                                                                 document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
+                                    {{ __('Logout') }}
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
                         @endguest
                     </ul>
                 </div>
@@ -147,7 +143,6 @@
             $(window).scroll(function() {
                 $('nav').toggleClass('scolled', $(this).scrollTop() > 10);
             });
-
         </script>
         <!-- navbar warna transisi js -->
     </div>
