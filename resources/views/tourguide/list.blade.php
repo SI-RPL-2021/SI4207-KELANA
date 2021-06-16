@@ -45,15 +45,18 @@
                             <p>
                                 Date : {{ $gd->tour_date }}
                             </p>
-                            <button type="button" class="btn btn-info btn-block text-center text-white" data-toggle="modal" data-target="#exampleModal">
-                                Feedback
-                            </button>
-                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <form action="{{ route('userListFeedback') }}" method="get" enctype="multipart/form-data">
+                                            <input type="hidden" name="guide_id" value="{{ $gd->guide_id }}">
+                                            <button type="submit" class="btn btn-info btn-block text-center text-white mb-3">List Feedback</button>
+                            </form>
+                            <a data-toggle="modal" data-id="{{ $gd->id }}" title="Add this item" class="open-feedbackDialog btn btn-info btn-block text-center text-white" href="#feedbackDialog">Feedback</a>
+                            
+                            <div class="modal fade" id="feedbackDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
-                                        <form action="{{ route('guide.feedback') }}" id="create" method="post" enctype="multipart/form-data">
+                                        <form action="{{ route('guide.feedback') }}" id="feedbackForm" method="post" enctype="multipart/form-data">
                                             {{ csrf_field() }}
-                                            <input type="hidden" name="id" value="{{ $gd->id }}">
+                                            <!-- <input type="hidden" name="id" value="{{ $gd->id }}"> -->
                                             <div class="modal-header">
                                                 <h5 class="modal-title" id="exampleModalLabel">Feedback</h5>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -61,6 +64,7 @@
                                                 </button>
                                             </div>
                                             <div class="modal-body">
+                                            <input type="hidden" name="id" id="GuideId" value=""/>
                                                 <div class="form-group">
                                                     <label class="col-4 col-form-label">Rating</label>
                                                     <div class="rating">
