@@ -102,7 +102,7 @@ class TourguideController extends Controller
         $tourguide = DB::table('tourguides')
             ->join('guides', 'tourguides.guide_id', '=', 'guides.id')
             ->join('users', 'tourguides.user_id', '=', 'users.id')
-            ->select('tourguides.*', 'guides.*', 'users.*')
+            ->select('tourguides.*', 'guides.guide_name', 'guides.guide_photo', 'guides.guide_location', 'guides.guide_price', 'users.name')
             ->where('tourguides.user_id', Auth::id())
             ->get();
         return view('tourguide.list', compact('tourguide'));
@@ -116,7 +116,6 @@ class TourguideController extends Controller
             $tourguide->ulasan = $request->ulasan;
             $tourguide->save();
         }
-
         return redirect()->route('tourguide.list');
     }
 
@@ -128,5 +127,16 @@ class TourguideController extends Controller
             ->select('tourguides.*', 'guides.guide_name', 'users.name')
             ->get();
         return view('admin.feedback', compact('tourguide'));
+    }
+
+    public function userListFeedback(Request $request)
+    {
+        $tourguide = DB::table('tourguides')
+            ->join('guides', 'tourguides.guide_id', '=', 'guides.id')
+            ->join('users', 'tourguides.user_id', '=', 'users.id')
+            ->where('tourguides.guide_id', $request->guide_id)
+            ->select('tourguides.*', 'guides.guide_name', 'users.name')
+            ->get();
+        return view('tourguide.feedback', compact('tourguide'));
     }
 }

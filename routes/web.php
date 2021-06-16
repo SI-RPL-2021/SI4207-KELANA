@@ -84,3 +84,5 @@ Route::post('/updateverifyGuide', [GuideController::class, 'updateVerifyGuide'])
 
 Route::get('/listFeedback', [TourguideController::class, 'listFeedback'])->name('listFeedback');
 Route::post('/feedbackGuide', [TourguideController::class, 'feedbackGuide'])->name('guide.feedback');
+
+Route::get('/userListFeedback', [TourguideController::class, 'userListFeedback'])->name('userListFeedback');

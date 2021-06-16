@@ -20,7 +20,7 @@ class CheapTripController extends Controller
         $cheapTrip1 = DB::table('cheaptrip')
             ->join('guides', 'cheaptrip.guide_id', '=', 'guides.id')
             ->join('parks as p1', 'cheaptrip.park_id1', '=', 'p1.id')
-            ->select('cheaptrip.*', 'guides.*', 'p1.park_title as park1', 'p1.park_title as park2', 'p1.park_title as park3')
+            ->select('cheaptrip.*', 'guides.*', 'p1.park_name as park1', 'p1.park_name as park2', 'p1.park_name as park3')
             ->whereNotNull('cheaptrip.park_id1')
             ->whereNull('cheaptrip.park_id2')
             ->whereNull('cheaptrip.park_id3')
@@ -30,7 +30,7 @@ class CheapTripController extends Controller
             ->join('guides', 'cheaptrip.guide_id', '=', 'guides.id')
             ->join('parks as p1', 'cheaptrip.park_id1', '=', 'p1.id')
             ->join('parks as p2', 'cheaptrip.park_id2', '=', 'p2.id')
-            ->select('cheaptrip.*', 'guides.*', 'p1.park_title as park1', 'p2.park_title as park2', 'p2.park_title as park3')
+            ->select('cheaptrip.*', 'guides.*', 'p1.park_name as park1', 'p2.park_name as park2', 'p2.park_name as park3')
             ->whereNotNull('cheaptrip.park_id1')
             ->whereNotNull('cheaptrip.park_id2')
             ->whereNull('cheaptrip.park_id3')
@@ -44,7 +44,7 @@ class CheapTripController extends Controller
             ->whereNotNull('cheaptrip.park_id1')
             ->whereNotNull('cheaptrip.park_id2')
             ->whereNotNull('cheaptrip.park_id3')
-            ->select('cheaptrip.*', 'guides.*', 'p1.park_title as park1', 'p2.park_title as park2', 'p3.park_title as park3')
+            ->select('cheaptrip.*', 'guides.*', 'p1.park_name as park1', 'p2.park_name as park2', 'p3.park_name as park3')
             ->get();
 
         // $cheapTrip = array_merge($cheapTrip1, $cheapTrip2);
